@@ -2,7 +2,6 @@ class Item < ApplicationRecord
 	belongs_to :adminster
 
 	has_many :tracks
-
 	attachment :image
 
 	has_many :discs, :dependent => :destroy

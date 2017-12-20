@@ -1,3 +1,117 @@
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-xs-offset-2 col-xs-8 panel panel-default">
+			<h2> 会員情報</h2>
+			<div>
+				<table class="table table-hover">
+					<thead>
+						<tbody>
+						<tr>
+							<th style="width:200px;">お名前</th>
+							<td>
+								<%= @user.first_name %>
+								<%= @user.last_name %>
+							</td>
+						</tr>
+						<tr>
+							<th>ふりがな</th>
+							<td>
+								<%= @user.first_name_kana %>
+								<%= @user.last_name_kana %>
+							</td>
+						</tr>
+						    <th>ご住所</th>
+							<td>
+								<%= @user.post_code %>
+								<%= @user.address %>
+							</td>
+						</tr>
+						<tr>
+							<th>電話番号</th>
+							<td>
+								<%= @user.phone %>
+							</td>
+						</tr>
+						<tr>
+							<th>メールアドレス</th>
+							<td>
+							    <%= @user.email %>
+							</td>
+						</tr>
+						<tr>
+							<th>パスワード</th>
+							<td>
+								*******
+								<i> 　※セキュリティのためパスワードは非表示となっています。</i>
+							</td>
+						</tr>
+					</tbody>
+					</thead>
+				</table>
+			</div>
+		</div>
+			<div class="col-xs-offset-2 col-xs-8">
+				<div class="pull-right">
+					<%= link_to ' 登録内容の編集', edit_user_path(current_user), class: 'btn btn-default glyphicon glyphicon-cog' %>
+					<%= link_to '退会する', user_path, class: 'btn btn-default', method: :delete, data: { confirm: "本当に退会しますか…？" } %>
+ 				</div>
+		    </div>
+    </div>
+
+	<div class="row">
+		<% @orders.each do |order| %>
+			<div class="col-xs-offset-2 col-xs-8 panel panel-default">
+				<h2> 購入履歴</h2>
+				<div class="row">
+					<div class="col-xs-4">
+						<h4>購入日</h4>
+							<p><%= order.created_at.strftime('%Y年%m月%d日 %H:%M') %></p>
+						<h4>購入者</h4>
+						<p>
+							<%= order.billing_first_name %>
+							<%= order.billing_last_name %>
+						</p>
+						<h4>送付先</h4>
+						<p>
+							<%= order.billing_post_code %>  
+							<%= order.billing_address %>
+						</p>
+						<h4>ステータス</h4>
+						<p>
+							<%= order.status %>
+						</p>
+					</div>
+					<div class="col-xs-6">
+		    <% order.order_items.each do |order_item| %>
+					　　<table class="table">
+						　　<thead>
+							<tr>
+								<td>
+									<div class="img"><%= attachment_image_tag order_item.item, :cd_image, class: "img-thumbnail cdcover", fallback: "no_image.jpg" %></div>
+								</td>
+								<td colspan="3">
+									<%= order_item.item.album_name %><br>
+									購入枚数: <%= order_item.quantity %> 枚<br>
+									小計 <%= order_item.item.price.to_s(:delimited) %> 円
+								</td>
+							</tr>
+						    </thead>
+					    </table>
+			<% end %>
+					</div>
+					<div class="col-md-12">
+						<p class="text-right"><span style="font-size: 20px;">合計　<%= order.total.try(:to_s, :delimited) %> 円</span></p>
+					</div>
+				</div>
+
+			</div>
+	    <% end %>
+	</div>
+	<div class="text-center">
+	<%= paginate @orders, class: "pagenate" %>
+    </div>
+</div>
 <% if flash[:notice] %>
   <div class="alert alert-success">
     <%= flash[:notice] %>
@@ -5,4 +119,4 @@
 <% end %>
 
 <p>aaaaa</p>
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<%#= link_to "ログアウト", destroy_user_session_path, method: :delete %>

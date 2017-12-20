@@ -1,0 +1,114 @@
+
+
+<div class="container">
+	<h2>カート</h2>
+	<div class="row">
+		<div class="col-xs-8">
+			<div>
+				<table class="table bordered" frame="box">
+					<thead>
+						<tr class="info">
+							<th>
+								商品画像
+							</th>
+							<th>
+								商品名
+							</th>
+							<th>
+								価格
+							</th>
+							<th>
+								数量
+							</th>
+							<th>
+								小計
+							</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+					<% quantity_count = 0 %>
+					<% sum_count = 0 %>
+					<% if current_user.carts.each do |cart_item| %>
+						<tr>
+							<td>
+								<div><%= attachment_image_tag cart_item.item, :cd_image, class: "img-thumbnail cdcover", fallback: "no_image.jpg" %></div>
+							</td>
+							<td>
+								<%= cart_item.item.album_name %>
+							</td>
+							<td>
+								<%= cart_item.item.price.to_s(:delimited) %> 円
+							</td>
+							<td>
+								<%= cart_item.quantity %> 個
+							</td>
+							<td>
+								<%= (cart_item.quantity*cart_item.item.price).to_s(:delimited) %> 円
+							</td>
+							<td>
+								<%= link_to "削除", cart_item, method: :delete, remote: true, class: 'btn btn-danger'  %>
+							</td>
+						</tr>
+						<% quantity_count += cart_item.quantity %>
+						<% sum_count += cart_item.quantity*cart_item.item.price %>
+					<% end.empty? %>
+					    <p>カートに商品は入っていません。</p>
+					<% end %>
+					</tbody>
+				</table>
+				<%= link_to 'ショッピングを続ける', root_path, class: 'btn btn-warning btn-block' %>
+			</div>
+
+			<h2>発送先住所</h2>
+
+				<%= form_for(@order) do |f| %>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>受取人名 苗字</label>
+							    <%= f.text_field :billing_first_name, class:"form-control", placeholder:"苗字", value: @user.first_name %>
+							    <%= f.text_field :billing_first_name_kana, class:"form-control", placeholder:"苗字(カナ)", value: @user.first_name_kana %>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>受取人名 名前</label>
+						        <%= f.text_field :billing_last_name, class:"form-control", placeholder:"名前", value: @user.last_name  %>
+						        <%= f.text_field :billing_last_name_kana, class:"form-control", placeholder:"名前(カナ)", value: @user.last_name_kana  %>
+						</div>
+					</div>
+		            <div class="col-md-12">
+		            	<div class="form-group">
+		            		<label>郵便番号</label>
+		            	        <%= f.text_field :billing_post_code, class:"form-control", placeholder:"郵便番号", value: @user.post_code  %>
+		            	</div>
+		            	<div class="form-group">
+		            		<label>発送先住所</label>
+		            	        <%= f.text_field :billing_address, class:"form-control", placeholder:"発送先住所", value: @user.address  %>
+		            	</div>
+		            	<div class="form-group">
+		            		<label>電話番号</label>
+		            	        <%= f.text_field :billing_phone, class:"form-control", placeholder:"電話番号", value: @user.phone  %>
+		            	</div>
+	            	</div>
+	            
+		</div>
+		<div class="col-xs-4">
+					<div class="panel panel-info">
+					    <div class="panel-heading"><span style="font-weight:bold;">
+					    	合計 <%= quantity_count %>点：
+					    	<span style="color:#ff0000;font-size: 20px;"><%= sum_count.to_s(:delimited) %>円</span></span>
+					    </div>
+					    <div class="panel-body">
+			
+			　　　　　　　　　<%= f.submit "レジへ進む", class:"btn btn-primary btn-block"%>
+			    <% end %>
+					    </div>
+				    </div>
+				</div>
+	</div>
+</div>
+
+
+</div>
+</div><br><br>

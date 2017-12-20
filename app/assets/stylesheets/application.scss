@@ -16,7 +16,35 @@
  */
 
 @import "bootstrap-sprockets";
-@import "bootstrap";            
+@import "bootstrap";
+
+.navbar {
+  margin-bottom: 50px;
+  border-radius: 0;
+}
+
+ .jumbotron {
+  margin-bottom: 0;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.panel {
+    height: 96%;
+}
+
+.panel-size {
+  height:119px;
+}
 
 /* item-index */
 

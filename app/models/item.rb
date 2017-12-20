@@ -1,10 +1,10 @@
 class Item < ApplicationRecord
 	belongs_to :adminster
-
+    has_many :order_items
+    has_many :discs, :dependent => :destroy
 	has_many :tracks
 	attachment :image
 
-	has_many :discs, :dependent => :destroy
 	has_many :carts
 
 	attachment :cd_image

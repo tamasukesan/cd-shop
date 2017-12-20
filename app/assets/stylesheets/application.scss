@@ -17,3 +17,38 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";            
+
+/* item-index */
+
+th,td{
+	text-align: center;
+}
+
+.btn-delete{
+	margin-bottom: 10px;
+}
+
+/* item-show */
+
+.table-header{
+	color:#ffffff;
+	background-color: #000000;
+}
+
+.space{
+	margin:20px 0;
+}
+
+/* Error message */
+
+#error_explanation{
+	color:red;
+	margin-bottom: 20px;
+	padding:10px;
+	background-color:  #F4F6F9;
+}
+
+.error_amount{
+	background-color:#000000;
+	color: #FFFFFF;
+}

@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Adminster.create(:email => 'sample@com', :password => 'aaaaaaaa')
 
 
@@ -17,3 +18,4 @@ Adminster.create(:email => 'sample@com', :password => 'aaaaaaaa')
          :cd_image_id => open "/db/migrate/sample.jpg",
          )
  end
+

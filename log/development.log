@@ -10944,3 +10944,209 @@ Processing by TopController#index as HTML
 Completed 200 OK in 481ms (Views: 431.7ms | ActiveRecord: 6.5ms)
 
 
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:26:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (113.5ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 3015ms (Views: 2795.6ms | ActiveRecord: 53.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:31:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (354.0ms)
+Completed 500 Internal Server Error in 481ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cart' for #<#<Class:0x0ba214d4>:0x0beb5450>):
+    20:         	<div class="panel-footer">
+    21:         		<div class="">
+    22:         			価格 | ¥<%= item.price %>
+    23:         			<%= f.select :quantity, options_for_select(@numbers, {selected: cart.quantity.to_i} ), class: "quantity-form" %>
+    24:         			<%= f.submit "カート", class: "btn, btn-primary pull-right" %>
+    25:         		</div>
+    26:         	</div>
+  
+app/views/top/index.html.erb:23:in `block (2 levels) in _app_views_top_index_html_erb___806301840_99986620'
+app/views/top/index.html.erb:11:in `block in _app_views_top_index_html_erb___806301840_99986620'
+app/views/top/index.html.erb:9:in `_app_views_top_index_html_erb___806301840_99986620'
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:31:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (3.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (336.2ms)
+Completed 500 Internal Server Error in 478ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cart' for #<#<Class:0x0ba214d4>:0x0b11ca28>):
+    20:         	<div class="panel-footer">
+    21:         		<div class="">
+    22:         			価格 | ¥<%= item.price %>
+    23:         			<%= f.select :quantity, options_for_select(@numbers, {selected: cart.quantity.to_i} ), class: "quantity-form" %>
+    24:         			<%= f.submit "カート", class: "btn, btn-primary pull-right" %>
+    25:         		</div>
+    26:         	</div>
+  
+app/views/top/index.html.erb:23:in `block (2 levels) in _app_views_top_index_html_erb___806301840_92859500'
+app/views/top/index.html.erb:11:in `block in _app_views_top_index_html_erb___806301840_92859500'
+app/views/top/index.html.erb:9:in `_app_views_top_index_html_erb___806301840_92859500'
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:31:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 643ms (Views: 588.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:35:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (3.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (20.5ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 517ms (Views: 482.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:36:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 546ms (Views: 505.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:37:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (3.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (48.7ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 708ms (Views: 607.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:38:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/top/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/vagrant/Cosin/app/views/top/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+/vagrant/Cosin/app/views/top/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/top/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+app/views/top/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/top/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:42:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (13.5ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 502ms (Views: 465.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:42:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (5.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (1223.7ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 1858ms (Views: 1767.6ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:43:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (3.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (15.7ms)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 555ms (Views: 508.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:52:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 271ms (ActiveRecord: 10.3ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/top/index.html.erb:20: syntax error, unexpected ')', expecting =>
+...back: "no_image.jpg",item_path);@output_buffer.safe_append='...
+...                               ^
+/vagrant/Cosin/app/views/top/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;             end 
+                         ^
+/vagrant/Cosin/app/views/top/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/vagrant/Cosin/app/views/top/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+/vagrant/Cosin/app/views/top/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/top/index.html.erb:20: syntax error, unexpected ')', expecting =>
+app/views/top/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+app/views/top/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/top/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/top/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:52:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/top/index.html.erb:20: syntax error, unexpected ')', expecting =>
+...back: "no_image.jpg",item_path);@output_buffer.safe_append='...
+...                               ^
+/vagrant/Cosin/app/views/top/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;             end 
+                         ^
+/vagrant/Cosin/app/views/top/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/vagrant/Cosin/app/views/top/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+/vagrant/Cosin/app/views/top/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/top/index.html.erb:20: syntax error, unexpected ')', expecting =>
+app/views/top/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+app/views/top/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/top/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/top/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 10.0.2.2 at 2017-12-20 16:55:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (777.5ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 2966ms (Views: 2897.8ms | ActiveRecord: 21.4ms)
+
+

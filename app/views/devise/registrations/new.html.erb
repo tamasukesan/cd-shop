@@ -1,29 +1,57 @@
-<h2>Sign up</h2>
+<body>
+  <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+            <div class="form-user">
+              <div class="form-header text-center">
+                <h2 class="form-header-title">ユーザーの登録</h2>
+              </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+                <div class="form-group">
+                  <%= f.text_field :last_name, autofocus: true, :class => "form-control" , :placeholder => "苗字"%>
+                  <%= f.text_field :last_name_kana, :class => "form-control" , :placeholder => "苗字(カナ)"%>
+                </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+                <div class="form-group">
+                  <%= f.text_field :first_name_kana, :class => "form-control" , :placeholder => "名前"%>
+                  <%= f.text_field :first_name_kana, :class => "form-control" , :placeholder => "名前(カナ)"%>
+                </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+                <div class="form-group">
+                  <%= f.email_field :email, :class => "form-control" , :placeholder => "メールアドレス" %>
+                </div>
 
-<%= render "devise/shared/links" %>
+                <div class="form-group">
+                  <%= f.text_field :post_code, :class => "form-control" , :placeholder => "郵便番号"%>
+                </div>
+
+                <div class="form-group">
+                  <%= f.text_field :address, :class => "form-control" , :placeholder => "住所" %>
+                </div>
+
+                <div class="form-group has-feedback">
+                  <%= f.text_field :phone, :class => "form-control" , :placeholder => "電話番号"%>
+                </div>
+
+                <div class="form-group has-feedback">
+                      <% if @minimum_password_length %>
+                      <em>(パスワードは <%= @minimum_password_length %>文字以上で作成してください)</em>
+                      <% end %><br />
+                  <%= f.password_field :password, :class => "form-control" , :placeholder => "パスワード"%>
+                  <%= f.password_field :password_confirmation, :class => "form-control" , :placeholder => "パスワード確認"%>
+                </div>
+
+                <%= f.submit "新規登録" , :class => "btn btn-lg btn-block btn-info"%>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+

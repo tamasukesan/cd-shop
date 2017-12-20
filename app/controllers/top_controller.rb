@@ -3,5 +3,6 @@ class TopController < ApplicationController
   	@items = Item.all
   	# @order_item = current_order.order_items.new
   	@cart = Cart.new
+  	# binding.pry
   end
 end

@@ -112,3 +112,11 @@
 	<%= paginate @orders, class: "pagenate" %>
     </div>
 </div>
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<p>aaaaa</p>
+<%#= link_to "ログアウト", destroy_user_session_path, method: :delete %>

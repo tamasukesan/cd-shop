@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    models:
+      item: 商品
+    attributes:
+      item:
+          album_name: アルバム名
+          artist_name: アーティスト名
+          artist_name_kana: アーティスト(カナ)
+          label_name: ラーベル名
+          genre: ジャンル
+          stock: 在庫数
+          editor: 編集者
+          price: 価格
+          item_status: 販売状況
+          cd_image: カーバーは

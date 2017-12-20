@@ -14,3 +14,4 @@
     Item.create(:adminster_id => "#{no}", :artist_name => "アーティスト #{no}", :album_name => "タイトル #{no}", :cd_image_id => "画像 #{no}", :price => "１０００#{no}" ,:label_name => "レーベル#{no}" ,:genre => "ジャンル#{no}" ,:luanch_date => "発売#{no}" , :artist_name_kana => "かな#{no}", :editor => "編集者#{no}", :stock => "在庫#{no}", :item_status => "ステータス#{no}" )
 end
     Item.create(:artist_name => "アーティスト", :album_name => "タイトル", :cd_image_id => "画像", :price => "1000" ,:label_name => "レーベル" ,:genre => "ジャンル" ,:luanch_date => "発売" , :artist_name_kana => "かな", :editor => "編集者", :stock => "在庫", :item_status => "ステータス" )
+

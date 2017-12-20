@@ -1,7 +1,59 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* new */
 .cdcover{
-	width:100px;
-	height:100px;
+	width:300px;
+	height:300px
 }
+
+.title{
+    margin:10px 0 30px;
+	border-bottom: 5px solid #F0F3F3;
+}
+
+/*
+.grey{
+	background-color: #F4F6F9;
+	padding:5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}*/
+
+.trash{
+	margin:7px 0 0 0 
+}
+
+.addsong{
+	margin: 7px 0;
+}
+
+.track{
+	margin: 5px 0;
+}
+
+.plusbtn{
+	margin: 0 0 5px 20px;
+}
+
+.adddisc{
+	margin-top: 7px; 
+}
+
+.searchbar{
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius:22px;
+    font-size: 14px;
+    background-color: white;
+    padding: 10px 18px 10px 18px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin: 0 20px 40px 20px;
+}
+
+
+
+
+>>>>>>> origin/master

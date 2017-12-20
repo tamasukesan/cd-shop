@@ -1,32 +1,42 @@
 class ItemsController < ApplicationController
 	def new
 		@item = Item.new
+		1.times do
+			disc = @item.discs.build
+		 		1.times{ disc.tracks.build }
+		end
 	end
 
 	def create
 		@item = Item.new(item_params)
-		# binding.pry
 		@item.adminster_id = current_adminster.id
 		if @item.save
-		  redirect_to items_path
+			redirect_to items_path
 		else
-        render 'new'
-        end
+			render :new
+		end
 	end
 
 	def edit
 		@item = Item.find(params[:id])
+		0.times do
+			disc = @item.discs.build
+		 		0.times{ disc.tracks.build }
+		 end
 	end
 
 	def update
 		@item = Item.find(params[:id])
-		@item.update(item_params)
-		redirect_to items_path
+		if @item.update(item_params)
+			redirect_to item_path
+		else
+			render :template => "items/edit"
+		end
 	end
 
 	def destroy
 		@item = Item.find(params[:id])
-		@item.destroy
+		@item.update_attribute(:active, false)
 		redirect_to items_path
 	end
 
@@ -41,14 +51,31 @@ class ItemsController < ApplicationController
 		@item = Item.find(params[:id])
 	end
 
-	def destroy
-	end
-
 	private
 	def item_params
-	  params.require(:item).permit(:adminster_id,:album_name, :price, :label_name, :genre, :luanch_date, :cd_image)
-	  	                #                              [:id, :disc_number, :disc_name, :_destroy, :tracks_attributes 
-	  	                #                              	[:id, :track_number, :track_name, :artist_name, :_destroy]
-	  							   					  # ])
+	  params.require(:item).permit(:adminster_id, 
+	  							   :artist_name, 
+	  							   :artist_name_kana, 
+	  							   :album_name, 
+	  							   :price, 
+	  							   :label_name, 
+	  							   :genre, 
+	  							   :cd_image, 
+	  							   :stock, 
+	  							   :luanch_date, 
+	  							   :editor, 
+	  							   :item_status,
+	  							   discs_attributes: [:id, 
+	  							   					  :disc_number, 
+	  							   					  :disc_name, 
+	  							   					  :_destroy,
+	  							   					  tracks_attributes: [:id, 
+	  							   					  					  :track_number, 
+	  							   					  					  :track_name, 
+	  							   					  					  :artist_name, 
+	  							   					  					  :_destroy
+	  							   					  					  ]
+	  							   					  ]
+	  							   	)
 	end
 end

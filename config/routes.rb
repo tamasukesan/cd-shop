@@ -6,11 +6,11 @@ Rails.application.routes.draw do
 
 
   resources :items
+
   resources :orders, only:[:create,:show, :index]
   resources :order_items
   resources :carts, only: [:show,:create,:update,:destroy]
   resources :users
-  
+
   root "top#index"
-  post "/" => "top#index"
 end

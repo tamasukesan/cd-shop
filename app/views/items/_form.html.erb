@@ -1,0 +1,115 @@
+<div class="container">
+	<div class="row">
+		<%= form_for(@item) do |f| %>
+
+		<!--error message-->
+		<% if @item.errors.any? %>
+			<div class="error_amount col-md-5 col-md-offset-4"><h4><%= @item.errors.count %>件のエラーが発生しました！</h4></div>
+			<div id="error_explanation" class="col-md-5 col-md-offset-4">
+			    	<% @item.errors.full_messages.each do |message| %>
+			        	<li><%= message %></li>
+			    	<% end %>
+			</div>
+   		 <% end %>
+
+
+
+		<div class="col-md-4">
+			<div class="form-group">
+				<%= f.label :cd_image, "カーバー" %>
+				<%= f.attachment_field :cd_image, placeholder: "画像", class: "user-edit-form" %>
+				<%= attachment_image_tag @item, :cd_image, class: "img-thumbnail cdcover", fallback: "no_image.jpg"%>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="col-md-12">
+				<div class="form-group">
+				  <%= f.label :album_name, "アルバム名" %>
+				  <%= f.text_field :album_name, class: "form-control" %>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="form-group">
+				  <%= f.label :artist_name, "アーティスト名" %>
+				  <%= f.text_field :artist_name, class: "form-control" %>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="form-group">
+				  <%= f.label :artist_name_kana, "アーティスト名(全角カナ)" %>
+				  <%= f.text_field :artist_name_kana, class: "form-control" %>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+			  <div class="form-group">
+		  		<%= f.label :label_name, "レーベル名" %>
+		  		<%= f.text_field :label_name, class: "form-control" %>
+		  	  </div>
+		  	</div>
+
+		  	<div class="col-md-12">
+		  	  <div class="form-group">
+		    	<%= f.label :genre, "ジャンル" %><br>
+		    	<%= f.select :genre, ['ミュージック', 'ロック', 'POP', 'ジャズ・フュージョン', 'アニメ・ゲーム', 'クラシック', 'ソウル・R&B'], :prompt => 'Select One' %>
+	          </div>
+		  	</div>
+
+		  	<div class="col-md-12">
+		  	  <div class="form-group">
+            	<%= f.label :luanch_date, "発行日" %><br>
+            	<%= f.date_select :luanch_date, start_year: Date.current.year-100, end_year: Date.current.year %>
+              </div>
+		  	</div>
+
+		  	<div class="col-md-12">
+			  <div class="form-group">
+		  		<%= f.label :stock, "在庫数" %>
+		  		<%= f.number_field :stock, class: "form-control" %>
+		  	  </div>
+		  	</div>
+
+		  	<div class="col-md-12">
+			  <div class="form-group">
+		  		<%= f.label :price, "価格" %>
+		  		<%= f.number_field :price, class: "form-control" %>
+		  	  </div>
+		  	</div>
+
+		  	<div class="col-md-12">
+			  <div class="form-group">
+		  		<%= f.label :item_status, "販売状況" %><br>
+		  		<%= f.radio_button :item_status, "0" %> 発売前
+				<%= f.radio_button :item_status, "1" %>  販売中
+				<%= f.radio_button :item_status, "2" %>  売り切れ
+		  	  </div>
+		  	</div>
+
+		  	<div class="col-md-12">
+	            <div class="form-group">					
+					 <%= f.fields_for :discs do |builder| %>
+					 	<%= render "disc_fields", f: builder %>
+					 <% end %>
+					 <%= link_to_add_fields "ディスク追加", f, :discs, class: "btn btn-primary btn-sm adddisc" %>
+	            </div>
+        	</div>
+
+
+		  	<div class="col-md-4">
+			  <div class="form-group">
+		  		<%= f.label :editor, "編集者" %>
+		  		<%= f.text_field :editor, class: "form-control" %>
+		  	  </div>
+		  	</div>
+			
+			<div class="col-md-12">
+			<%= f.submit "保存", class: "btn, btn-success" %>
+			</div>
+		</div>
+		<%end%>
+	</div>
+</div>
+<br>
+<br>

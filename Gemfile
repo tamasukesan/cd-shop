@@ -29,7 +29,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
 gem 'pry-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -61,6 +63,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem 'kaminari'
 gem "font-awesome-rails"
 gem 'rspec-rails'
-
+gem 'pry'
+gem 'rails-i18n'
 
 

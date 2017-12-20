@@ -1,0 +1,32 @@
+
+
+<div class="container">
+  <div class="row row-eq-height">
+  	<% @items.each do |item| %>
+    <div class="col-sm-3">
+    	<%= form_for(@cart, remote: true) do |f| %>
+    	<div class="panel panel-primary">
+    		<%= f.hidden_field :item_id, value: item.id %>
+    		<div class="panel-heading panel-size"><h4><%= item.album_name %></h4>
+    			<br>
+    			<%= item.label_name %>
+    		</div>
+    		<div class="panel-body">
+    			<%= attachment_image_tag item, :cd_image, class: "img-thumbnail", fallback: "no_image.jpg"%></div>
+        	<div class="panel-footer">
+        		<div class="">
+        			価格 | ¥<%= item.price %>
+        			<%= f.text_field :quantity, value: 1, min: 1, class: "quantity-form" %>
+        			<%= f.submit "カート", class: "btn, btn-primary pull-right" %>
+        		</div>
+        	</div>
+        	
+    	</div>
+    </div>
+      <% end %>
+       <% end %>
+  </div>
+</div>
+  	
+
+

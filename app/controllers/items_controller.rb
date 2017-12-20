@@ -47,14 +47,13 @@ class ItemsController < ApplicationController
 		@items = Item.all
 		if params[:search].present?
 			@items = @items.get_all params[:search]
-		end	
+		end
 	end
 
 	def show
 		@item = Item.find(params[:id])
 	end
 
-	
 	private
 	def item_params
 	  params.require(:item).permit(:adminster_id, 

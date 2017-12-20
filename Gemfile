@@ -61,7 +61,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem 'kaminari'
 gem "font-awesome-rails"
 gem 'rspec-rails'
-gem 'pry'
+gem 'pry-rails'
 gem 'rails-i18n'
 
 

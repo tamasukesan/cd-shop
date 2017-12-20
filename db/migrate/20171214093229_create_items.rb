@@ -13,7 +13,7 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.datetime :luanch_date
       t.string :editor
       t.integer :item_status
-      
+
       t.timestamps
     end
   end

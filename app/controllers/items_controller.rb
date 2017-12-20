@@ -9,13 +9,13 @@ class ItemsController < ApplicationController
 
 	def create
 		@item = Item.new(item_params)
+		redirect_to items_path
 		@item.adminster_id = current_adminster.id
 		if @item.save
 			redirect_to items_path
 		else
 			render :new
 		end
-
 	end
 
 	def edit
@@ -28,6 +28,8 @@ class ItemsController < ApplicationController
 
 	def update
 		@item = Item.find(params[:id])
+		@item.update(item_params)
+		redirect_to items_path
 		if @item.update(item_params)
 			redirect_to item_path
 		else
@@ -52,6 +54,7 @@ class ItemsController < ApplicationController
 		@item = Item.find(params[:id])
 	end
 
+	
 	private
 	def item_params
 	  params.require(:item).permit(:adminster_id, 

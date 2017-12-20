@@ -6,3 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Adminster.create(:email => 'sample@com', :password => 'aaaaaaaa')
+
+
+5.times do |no|
+     Item.create(
+         :adminster_id => 1,
+         :album_name => "テスト #{no}",
+         :artist_name => "アーティスト #{no}",
+         :price => "1000",
+         :cd_image_id => open "/db/migrate/sample.jpg",
+         )
+ end
+

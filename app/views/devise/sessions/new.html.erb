@@ -1,29 +1,40 @@
-<h2>Log in</h2>
+<head>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <title>Login</title>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+</head>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+<body>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-4 col-md-5">
+          <div class="form-adminster">
+              <div class="form-header text-center">
+                <h2 class="form-header-title">ログイン</h2>
+              </div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+              <div class="form-group has-feedback">
+                  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-<%= render "devise/shared/links" %>
+                        <%= f.email_field :email, autofocus: true, :class => "form-control" , :placeholder => "メールアドレス" %>
+                        <%= f.password_field :password, autocomplete: "off" , :class => "form-control" , :placeholder => "パスワード"%>
 
+                          <!-- これ使いますか？↓パスワード記憶させておくやつ・・・ -->
+                          <% if devise_mapping.rememberable? -%>
+                            <div class="field">
+                              <%= f.check_box :remember_me %>
+                              <%= f.label :remember_me %>
+                            </div>
+                          <% end -%>
 
+                          <%= f.submit "ログイン" , :class => "btn btn-lg btn-block btn-info"%>
+                  <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
 
+</body>

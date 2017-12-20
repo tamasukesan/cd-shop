@@ -6,6 +6,5 @@ class Disc < ApplicationRecord
 	accepts_nested_attributes_for :tracks, :allow_destroy => true
 
 
-	
 end
 

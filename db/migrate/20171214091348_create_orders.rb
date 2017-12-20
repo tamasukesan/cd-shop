@@ -11,6 +11,7 @@ class CreateOrders < ActiveRecord::Migration[5.1]
       t.string :billing_address
       t.datetime :buy_at
       t.integer :total
+      t.integer :status, default: 0, null: false, limit: 1
 
       t.timestamps
     end

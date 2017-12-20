@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :orders, only:[:create,:show, :index]
   resources :order_items
   resources :carts, only: [:show,:create,:update,:destroy]
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update, :index]
   resources :adminsters, only: [:top, :manage_users, :edit_user_details]
 
   root "top#index"

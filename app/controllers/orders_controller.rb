@@ -1,17 +1,26 @@
 class OrdersController < ApplicationController
     def create
         @order = current_user.orders.new(order_params)
-        # @order.total = Cart.quantity*item.price
+        @order.billing_first_name = params[:order][:billing_first_name]
+        @order.billing_last_name = params[:order][:billing_last_name]
+        @order.billing_first_name_kana = params[:order][:billing_first_name_kana]
+        @order.billing_last_name_kana = params[:order][:billing_last_name_kana]
+        @order.billing_post_code = params[:order][:billing_post_code]
+        @order.billing_phone = params[:order][:billing_phone]
+        @order.billing_address = params[:order][:billing_address]
+        @order.status = 0
+
         @order.save
 
         sum_count = 0
-        current_user.carts.each do |cart|
+        current_user.cart.each do |cart|
             @order_item = @order.order_items.new
             @order_item.item_id = cart.item_id
             @order_item.subtotal = cart.quantity*cart.item.price
             @order_item.status = cart.item.item_status
             @order_item.quantity = cart.quantity
             sum_count += @order_item.subtotal
+            @order.billing_first_name = params[:order][:billing_first_name]
             @order.total = sum_count
             # binding.pry
             @order_item.save
@@ -40,6 +49,7 @@ class OrdersController < ApplicationController
         							  :billing_phone, 
         							  :billing_address, 
         							  :buy_at, 
-        							  :total)
+        							  :total, 
+                                      :status)
       end
 end

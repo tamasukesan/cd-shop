@@ -35,8 +35,8 @@ class Item < ApplicationRecord
 	validates :price, 
 					numericality: { greater_than_or_equal_to: 1, only_integer: true} 
 
-	validates :cd_image, 
-					format: { with: %r{\.(gif\jpg\png)\Z}i,
-					message: 'gif,png,jpgファイルをアップロートしてください'}
+	# validates :cd_image, 
+	# 				format: { with: %r{\.(gif|jpg|png)\Z}i,
+	# 				message: 'gif,png,jpgファイルをアップロートしてください'}
 
 end

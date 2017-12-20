@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20171214094615) do
     t.integer "item_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active"
   end
 
   create_table "order_items", force: :cascade do |t|

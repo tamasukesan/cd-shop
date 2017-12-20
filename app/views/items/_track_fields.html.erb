@@ -1,0 +1,11 @@
+<fieldset class="track">
+	<div class="col-md-1 addsong"><%= f.select :track_number, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'], :prompt => '番号' %></div>
+	<div class="col-md-3"><%= f.text_field :artist_name, placeholder: "アーティスト名", class: "form-control" %></div>
+    <div class="col-md-7"><%= f.text_field :track_name, placeholder: "曲名", class: "form-control" %></div>
+
+	
+	<%= link_to "ー", '#', class: "remove_fields btn btn-danger btn-sm"%>
+	<%= f.hidden_field :_destroy %>
+	
+
+</fieldset>

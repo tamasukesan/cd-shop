@@ -14,6 +14,5 @@ class AdminstersController < ApplicationController
 	end
 
 	def update
-		
 	end
 end

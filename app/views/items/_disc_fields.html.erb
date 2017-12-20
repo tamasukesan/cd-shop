@@ -1,0 +1,24 @@
+<div class="row">
+<fieldset class="grey">
+	<div class="col-md-12">
+		<%= f.label :name, "ディスク" %>
+		<%= f.hidden_field :_destroy %>
+		<%= link_to '#', class: "remove_fields" do%><span class="glyphicon glyphicon-trash trash"></span><% end %>
+	</div>
+	
+	<div class="col-md-1 addsong"><%= f.select :disc_number, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], :prompt => '番号' %></div>
+
+	<div class="col-md-11">
+	<%= f.text_field :disc_name, placeholder: "ディスク名", class: "form-control" %>
+	</div>
+
+	<!--曲の増加-->
+	<div class="col-md-12">
+		<%= f.fields_for :tracks do |builder| %>
+			<%= render "track_fields", f: builder %>
+		<% end %>
+		<%= link_to_add_fields "＋", f, :tracks, class: "btn btn-primary btn-sm plusbtn" %>					
+	</div>
+
+</fieldset>
+</div>

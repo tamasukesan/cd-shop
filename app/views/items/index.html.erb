@@ -17,33 +17,33 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>アルバム名</th>
-					<th>アーティスト名</th>
-					<th>ジャンル</th>
-					<th>販売日</th>
-					<th>在庫数</th>
-					<th>販売状況</th>
-					<th>価格</th>
-					<th>Active</th>
+					<th class="center">アルバム名</th>
+					<th class="center">アーティスト名</th>
+					<th class="center">ジャンル</th>
+					<th class="center">販売日</th>
+					<th class="center">在庫数</th>
+					<th class="center" >販売状況</th>
+					<th class="center">価格</th>
+					<th class="center">存在</th>
 					<th colspan="3">アクション</th>
 				</tr>
 			</thead>
 			<tbody>
 				<% @items.each do |item| %>
 				<tr>
-					<td><%= item.album_name %></td>
-					<td>
+					<td class="center"><%= item.album_name %></td>
+					<td class="center">
 						<ruby>
 							<%= item.artist_name %> 
 								<rt><%= item.artist_name_kana %></rt>
 						</ruby>
 					</td>
-					<td><%= item.genre %></td>
-					<td><%= item.luanch_date.strftime('%Y/%m/%d') %></td>
-					<td><%= item.stock %></td>
-					<td><%= item.item_status %></td>
-					<td>¥ <%= item.price.to_s(:delimited) %></td>
-					<td><%= item.active %></td>
+					<td class="center"><%= item.genre %></td>
+					<td class="center"><%= item.luanch_date.strftime('%Y/%m/%d') %></td>
+					<td class="center"><%= item.stock %></td>
+					<td class="center"><%= item.item_status %></td>
+					<td class="center">¥ <%= item.price.to_s(:delimited) %></td>
+					<td class="center"><%= item.active %></td>
 					<td><%= link_to item_path(item) do %><i class="fa fa-window-maximize" aria-hidden="true"></i><% end%></td>
 					<td><%= link_to edit_item_path(item) do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %></td>
 					<td><%= link_to item_path(item), method: :delete, "data-confirm" => "Are you sure?" do %><i class="fa fa-trash-o" aria-hidden="true"></i><% end %></td>

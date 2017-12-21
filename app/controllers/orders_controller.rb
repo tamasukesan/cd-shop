@@ -22,12 +22,12 @@ class OrdersController < ApplicationController
             sum_count += @order_item.subtotal
             @order.billing_first_name = params[:order][:billing_first_name]
             @order.total = sum_count
-            # binding.pry
             @order_item.save
             @order.save
             cart.delete
         end
         redirect_to user_path(current_user.id)
+
     end
 
 	def show
@@ -39,17 +39,18 @@ class OrdersController < ApplicationController
 	end
 
 	private
-      def order_params
-        params.require(:order).permit(:user_id, 
-        							  :billing_first_name, 
-        							  :billing_last_name, 
-        							  :billing_first_name_kana, 
-        							  :billing_last_name_kana, 
-        							  :billing_post_code, 
-        							  :billing_phone, 
-        							  :billing_address, 
-        							  :buy_at, 
-        							  :total, 
-                                      :status)
-      end
+    def order_params
+    params.require(:order).permit(:user_id, 
+                                  :billing_first_name, 
+                                  :billing_last_name, 
+                                  :billing_first_name_kana, 
+                                  :billing_last_name_kana, 
+                                  :billing_post_code, 
+                                  :billing_phone, 
+                                  :billing_address, 
+                                  :buy_at, 
+                                  :total, 
+                                  :status)
+    end
+
 end

@@ -44,14 +44,14 @@
 								<%= cart_item.quantity %> 個
 							</td>
 							<td>
-								<%= (cart_item.quantity*cart_item.item.price).to_s(:delimited) %> 円
+								<%#= (cart_item.quantity*cart_item.item.price).to_s(:delimited) %> 円
 							</td>
 							<td>
 								<%= link_to "削除", cart_item, method: :delete, remote: true, class: 'btn btn-danger'  %>
 							</td>
 						</tr>
-						<% quantity_count += cart_item.quantity %>
-						<% sum_count += cart_item.quantity*cart_item.item.price %>
+						<%# quantity_count += cart_item.quantity %>
+						<%# sum_count += cart_item.quantity*cart_item.item.price %>
 					<% end.empty? %>
 					    <p>カートに商品は入っていません。</p>
 					<% end %>
@@ -63,23 +63,34 @@
 			<h2>発送先住所</h2>
 
 				<%= form_for(@order) do |f| %>
+			        <% if @order.errors.any? %>
+			            <div id="error_explanation">
+			                <h2><%= @order.errors.count %>件のエラーが発生しました！</h2>
+			                <ul>
+			                  <% @order.errors.full_messages.each do |message| %>
+			                    <li><%= message %></li>
+			                  <% end %>
+			                </ul>
+			            </div>
+			        <% end %>
+
 					<div class="col-md-6">
 						<div class="form-group">
-							<label>受取人名 苗字</label>
+							<label>受取人名 苗字 かな</label>
 							    <%= f.text_field :billing_first_name, class:"form-control", placeholder:"苗字", value: @user.last_name %>
 							    <%= f.text_field :billing_first_name_kana, class:"form-control", placeholder:"苗字(カナ)", value: @user.last_name_kana %>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
-							<label>受取人名 名前</label>
+							<label>受取人名 名前 かな</label>
 						        <%= f.text_field :billing_last_name, class:"form-control", placeholder:"名前", value: @user.first_name  %>
 						        <%= f.text_field :billing_last_name_kana, class:"form-control", placeholder:"名前(カナ)", value: @user.first_name_kana  %>
 						</div>
 					</div>
 		            <div class="col-md-12">
 		            	<div class="form-group">
-		            		<label>郵便番号</label>
+		            		<label>郵便番号<i>　例）1234567(ハイフン無し)</i></label>
 		            	        <%= f.text_field :billing_post_code, class:"form-control", placeholder:"郵便番号", value: @user.post_code  %>
 		            	</div>
 		            	<div class="form-group">
@@ -87,11 +98,10 @@
 		            	        <%= f.text_field :billing_address, class:"form-control", placeholder:"発送先住所", value: @user.address  %>
 		            	</div>
 		            	<div class="form-group">
-		            		<label>電話番号</label>
+		            		<label>電話番号<i>　例）1234567(ハイフン無し)</i></label>
 		            	        <%= f.text_field :billing_phone, class:"form-control", placeholder:"電話番号", value: @user.phone  %>
 		            	</div>
 	            	</div>
-	            
 		</div>
 		<div class="col-xs-4">
 					<div class="panel panel-info">
@@ -100,8 +110,12 @@
 					    	<span style="color:#ff0000;font-size: 20px;"><%= sum_count.to_s(:delimited) %>円</span></span>
 					    </div>
 					    <div class="panel-body">
-			
-			　　　　　　　　　<%= f.submit "レジへ進む", class:"btn btn-primary btn-block"%>
+
+	                    <% if quantity_count == 0 %>
+                          <div class="btn btn-primary btn-block"> カートに商品を入れてください</div>
+	                    <% else %>
+			             <%= f.submit "レジへ進む", class:"btn btn-primary btn-block"%>
+				        <% end %>
 			    <% end %>
 					    </div>
 				    </div>

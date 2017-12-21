@@ -4,8 +4,8 @@
     <div class="col-md-7"><%= f.text_field :track_name, placeholder: "曲名", class: "form-control" %></div>
 
 	
-	<%= link_to "ー", '#', class: "remove_fields btn btn-danger btn-sm"%>
-	<%= f.hidden_field :_destroy %>
-	
+	<%#= link_to "ー", '#', class: "remove_fields btn btn-danger btn-sm"%>
+	<%= f.hidden_field :_destroy %> 
+	<%= link_to '#', class: "remove_fields btn btn-danger" do%>ー<% end %>
 
 </fieldset>

@@ -11150,3 +11150,471 @@ Processing by TopController#index as HTML
 Completed 200 OK in 2966ms (Views: 2897.8ms | ActiveRecord: 21.4ms)
 
 
+Started POST "/carts" for 10.0.2.2 at 2017-12-21 02:08:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+HZRaR/TvqVMARXUngjkj7f9vLOmovftEcqc13X6FlpdpV8qkokMsG3ePaNx2jYfpP/7FYqSPd1SfAuFMk5Yg==", "cart"=>{"item_id"=>"1", "quantity"=>"1"}, "commit"=>"カート"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (8.2ms)[0m  [1m[32mINSERT INTO "carts" ("user_id", "item_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["item_id", 1], ["quantity", 1], ["created_at", "2017-12-21 02:08:25.390746"], ["updated_at", "2017-12-21 02:08:25.390746"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/carts/4
+Completed 302 Found in 350ms (ActiveRecord: 38.2ms)
+
+
+Started GET "/carts/4" for 10.0.2.2 at 2017-12-21 02:08:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (1.9ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered carts/show.html.erb within layouts/application (700.5ms)
+Completed 200 OK in 8301ms (Views: 8139.6ms | ActiveRecord: 14.3ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2017-12-21 02:18:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n6cOzQjCbl8ns/KlMHT+t2vBlgVF5IiVMbheb0bazgs1MEL0BvcEl3M0jgTvy7X9K42fG91US73wtoQyD8QfMA=="}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 02:18:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 533ms (Views: 495.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-12-21 02:18:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 530ms (Views: 527.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-12-21 02:18:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P13JAODkFQCB3JAP8d7VkhCKpdfkeWCwtxAilfz69WZZCcPIG3kxVTnkDV7D+3n3CH2wXz1dEndEml9SDAPkSA==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-12-21 02:18:37.787420"], ["last_sign_in_at", "2017-12-20 11:19:21.731905"], ["sign_in_count", 3], ["updated_at", "2017-12-21 02:18:37.789905"], ["id", 4]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 510ms (ActiveRecord: 18.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 02:18:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 479ms (Views: 444.0ms | ActiveRecord: 5.2ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2017-12-21 02:18:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZbBW1zVXQfpQZMOfEIrpuTAqgq6pdIlDdOeV+iu8PbGoFVCkXEoR76qJrApOJhJb5HDnPpT+/lB8ircevcUt+A=="}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 02:18:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 507ms (Views: 476.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-12-21 02:18:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 477ms (Views: 475.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adminsters/sign_in" for 10.0.2.2 at 2017-12-21 02:18:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 720ms (Views: 586.5ms | ActiveRecord: 19.0ms)
+
+
+Started POST "/adminsters/sign_in" for 10.0.2.2 at 2017-12-21 02:18:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"74dGINL216/CfDN7pIPrcx+ePN8DxNeTG0fTemYrWYDOHpGvTUBxOMJPdOMdxYC/HS9G51N33NpjCSs8np/8QA==", "adminster"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdminster Load (2.8ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."email" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[33mUPDATE "adminsters" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "adminsters"."id" = ?[0m  [["current_sign_in_at", "2017-12-21 02:18:48.120131"], ["sign_in_count", 2], ["updated_at", "2017-12-21 02:18:48.122382"], ["id", 1]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 363ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 02:18:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (13.9ms)
+  [1m[36mAdminster Load (2.1ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 447ms (Views: 412.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2017-12-21 02:18:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_track_fields.html.erb (3.3ms)
+  Rendered items/_track_fields.html.erb (1.5ms)
+  Rendered items/_disc_fields.html.erb (63.8ms)
+  Rendered items/_track_fields.html.erb (1.7ms)
+  Rendered items/_disc_fields.html.erb (30.0ms)
+  Rendered items/_form.html.erb (380.7ms)
+  Rendered items/new.html.erb within layouts/application (407.4ms)
+  [1m[36mAdminster Load (2.2ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1032ms (Views: 845.8ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2017-12-21 02:19:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_track_fields.html.erb (3.2ms)
+  Rendered items/_track_fields.html.erb (1.7ms)
+  Rendered items/_disc_fields.html.erb (75.8ms)
+  Rendered items/_track_fields.html.erb (1.3ms)
+  Rendered items/_disc_fields.html.erb (29.2ms)
+  Rendered items/_form.html.erb (183.0ms)
+  Rendered items/new.html.erb within layouts/application (210.4ms)
+  [1m[36mAdminster Load (2.6ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 763ms (Views: 654.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2017-12-21 02:19:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_track_fields.html.erb (2.2ms)
+  Rendered items/_track_fields.html.erb (1.4ms)
+  Rendered items/_disc_fields.html.erb (65.2ms)
+  Rendered items/_track_fields.html.erb (1.3ms)
+  Rendered items/_disc_fields.html.erb (29.7ms)
+  Rendered items/_form.html.erb (177.8ms)
+  Rendered items/new.html.erb within layouts/application (206.5ms)
+  [1m[36mAdminster Load (1.9ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 633ms (Views: 593.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2017-12-21 02:19:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_track_fields.html.erb (2.3ms)
+  Rendered items/_track_fields.html.erb (2.2ms)
+  Rendered items/_disc_fields.html.erb (68.7ms)
+  Rendered items/_track_fields.html.erb (1.4ms)
+  Rendered items/_disc_fields.html.erb (32.9ms)
+  Rendered items/_form.html.erb (187.0ms)
+  Rendered items/new.html.erb within layouts/application (213.8ms)
+  [1m[36mAdminster Load (2.9ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 702ms (Views: 638.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2017-12-21 02:19:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_track_fields.html.erb (3.1ms)
+  Rendered items/_track_fields.html.erb (1.4ms)
+  Rendered items/_disc_fields.html.erb (86.7ms)
+  Rendered items/_track_fields.html.erb (1.3ms)
+  Rendered items/_disc_fields.html.erb (31.9ms)
+  Rendered items/_form.html.erb (243.2ms)
+  Rendered items/new.html.erb within layouts/application (282.5ms)
+  [1m[36mAdminster Load (2.0ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 831ms (Views: 782.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2017-12-21 02:19:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_track_fields.html.erb (4.5ms)
+  Rendered items/_track_fields.html.erb (1.7ms)
+  Rendered items/_disc_fields.html.erb (71.8ms)
+  Rendered items/_track_fields.html.erb (1.5ms)
+  Rendered items/_disc_fields.html.erb (30.3ms)
+  Rendered items/_form.html.erb (185.9ms)
+  Rendered items/new.html.erb within layouts/application (216.2ms)
+  [1m[36mAdminster Load (1.9ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 657ms (Views: 627.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 02:19:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (12.9ms)
+  [1m[36mAdminster Load (1.9ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 456ms (Views: 426.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2017-12-21 02:19:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_track_fields.html.erb (2.3ms)
+  Rendered items/_track_fields.html.erb (1.6ms)
+  Rendered items/_disc_fields.html.erb (64.9ms)
+  Rendered items/_track_fields.html.erb (1.7ms)
+  Rendered items/_disc_fields.html.erb (31.2ms)
+  Rendered items/_form.html.erb (181.6ms)
+  Rendered items/new.html.erb within layouts/application (210.3ms)
+  [1m[36mAdminster Load (2.0ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 661ms (Views: 607.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/new" for 10.0.2.2 at 2017-12-21 02:19:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_track_fields.html.erb (2.9ms)
+  Rendered items/_track_fields.html.erb (2.1ms)
+  Rendered items/_disc_fields.html.erb (73.7ms)
+  Rendered items/_track_fields.html.erb (1.9ms)
+  Rendered items/_disc_fields.html.erb (30.9ms)
+  Rendered items/_form.html.erb (222.8ms)
+  Rendered items/new.html.erb within layouts/application (261.7ms)
+  [1m[36mAdminster Load (1.9ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 705ms (Views: 670.6ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2017-12-21 02:21:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"77avupZbPe+iRVDDUD0w1wwdivO79pqwrqsY+kj9S1HY7oAHS87BSKd3LRydDB7NUCBPLdwrzNuwQbhbZfY0Ug=="}
+  [1m[36mAdminster Load (2.0ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 02:21:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 491ms (Views: 451.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-12-21 02:21:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 487ms (Views: 485.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-12-21 02:21:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmRmTUJ6PXOygAU/6k9b7pP1EHM17w7hPxD29zVBqiYTFwj0ajYgxS0fC87zPumwhS0mPgJ6bZ0OYVTJis12lQ==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-12-21 02:21:40.287269"], ["last_sign_in_at", "2017-12-21 02:18:37.787420"], ["sign_in_count", 4], ["updated_at", "2017-12-21 02:21:40.289911"], ["id", 4]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 379ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 02:21:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (13.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 475ms (Views: 443.6ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/carts" for 10.0.2.2 at 2017-12-21 02:21:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OavpSVQLEQVovYiinv9DHBYZGWV7A1gZ644quEeQZSCc9rtIy3+Rmm0UnuZjOKLTWWVta4ht11spHQrNGZA95A==", "cart"=>{"item_id"=>"2", "quantity"=>"5"}, "commit"=>"カート"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "carts" ("user_id", "item_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 4], ["item_id", 2], ["quantity", 5], ["created_at", "2017-12-21 02:21:47.919567"], ["updated_at", "2017-12-21 02:21:47.919567"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/carts/4
+Completed 302 Found in 38ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/carts/4" for 10.0.2.2 at 2017-12-21 02:21:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (1.8ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered carts/show.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 459ms (Views: 421.6ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/carts/4" for 10.0.2.2 at 2017-12-21 02:47:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (2.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered carts/show.html.erb within layouts/application (871.8ms)
+Completed 200 OK in 3320ms (Views: 3012.6ms | ActiveRecord: 44.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 02:47:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (28.1ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 486ms (Views: 447.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/carts/4" for 10.0.2.2 at 2017-12-21 02:48:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (1.9ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered carts/show.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 650ms (Views: 541.4ms | ActiveRecord: 9.8ms)
+
+
+Started DELETE "/carts/11" for 10.0.2.2 at 2017-12-21 02:48:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#destroy as JS
+  Parameters: {"id"=>"11"}
+  [1m[36mCart Load (2.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.0ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 11]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/carts/11
+Completed 200 OK in 31ms (ActiveRecord: 17.4ms)
+
+
+Started GET "/carts/11" for 10.0.2.2 at 2017-12-21 02:48:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (1.9ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered carts/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 623ms (Views: 569.6ms | ActiveRecord: 7.3ms)
+
+
+Started DELETE "/carts/12" for 10.0.2.2 at 2017-12-21 02:48:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#destroy as JS
+  Parameters: {"id"=>"12"}
+  [1m[36mCart Load (2.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.3ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/carts/12
+Completed 200 OK in 28ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/carts/12" for 10.0.2.2 at 2017-12-21 02:48:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (1.8ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered carts/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 550ms (Views: 495.2ms | ActiveRecord: 4.1ms)
+
+
+Started DELETE "/carts/12" for 10.0.2.2 at 2017-12-21 02:48:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartsController#destroy as JS
+  Parameters: {"id"=>"12"}
+  [1m[36mCart Load (2.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Completed 404 Not Found in 14ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Cart with 'id'=12):
+  
+app/controllers/carts_controller.rb:26:in `destroy'
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2017-12-21 02:48:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"G249QVOJB+tynXsqNVz6iriND+nNji5p1pMjLdHCFM2+M29AzP2HdHc0bW7ImxtF9/F75z7goSsUAANYj8JMCQ=="}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 49ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 02:48:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 458ms (Views: 428.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=bbb&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2017-12-21 02:48:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"bbb", "commit"=>"検索"}
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE ("items"."album_name" LIKE '%bbb%' OR ("items"."artist_name_kana" LIKE '%bbb%' OR "items"."artist_name" LIKE '%bbb%'))[0m
+  Rendered top/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 474ms (Views: 435.8ms | ActiveRecord: 2.2ms)
+
+

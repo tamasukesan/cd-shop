@@ -18,7 +18,6 @@ class AdminstersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
-		# binding.pry
 		if @user.update(user_params)
         	redirect_to adminsters_path(@user.id), notice: "更新しました。"
         else

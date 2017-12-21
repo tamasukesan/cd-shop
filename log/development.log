@@ -11542,3 +11542,1433 @@ Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0
 Refile::App: Could not find attachment by id: 361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a
 Refile::App: [2017-12-21 06:04:04 +0000] GET "/e688b240d003f977945a7ad789be426d814ed305/store/361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a/cd_image" 404 2.7ms
 
+Started GET "/adminsters/sign_in" for 10.0.2.2 at 2017-12-21 06:47:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (367.2ms)
+Completed 200 OK in 1544ms (Views: 1512.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/adminsters/user" for 10.0.2.2 at 2017-12-21 06:47:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for AdminstersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/adminsters/items" for 10.0.2.2 at 2017-12-21 06:49:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for AdminstersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/items" for 10.0.2.2 at 2017-12-21 06:52:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (372.4ms)
+Completed 200 OK in 1614ms (Views: 1537.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/adminsters/sign_in" for 10.0.2.2 at 2017-12-21 06:52:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 314ms (Views: 287.2ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/adminsters/sign_in" for 10.0.2.2 at 2017-12-21 06:53:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fdo2wr4HtO6Xi82Ps+dY61BZpQSAHchC0qvpNXsg3TKLSwAy984TjysTsEi/RdiRliXHzg1QYf5v4RjxeBorCQ==", "adminster"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdminster Load (2.2ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."email" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[33mUPDATE "adminsters" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "adminsters"."id" = ?[0m  [["current_sign_in_at", "2017-12-21 06:53:08.212282"], ["sign_in_count", 2], ["updated_at", "2017-12-21 06:53:08.214126"], ["id", 1]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 261ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 06:53:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (18.1ms)
+  [1m[36mAdminster Load (1.5ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 292ms (Views: 247.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/attachments/34a7050163c5c683f5ff64199cbddd5114bc8c57/store/ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18/cd_image" for 10.0.2.2 at 2017-12-21 06:53:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: Could not find attachment by id: ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18
+Refile::App: [2017-12-21 06:53:08 +0000] GET "/34a7050163c5c683f5ff64199cbddd5114bc8c57/store/ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18/cd_image" 404 5.0ms
+
+Started GET "/attachments/e688b240d003f977945a7ad789be426d814ed305/store/361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a/cd_image" for 10.0.2.2 at 2017-12-21 06:53:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: Could not find attachment by id: 361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a
+Refile::App: [2017-12-21 06:53:08 +0000] GET "/e688b240d003f977945a7ad789be426d814ed305/store/361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a/cd_image" 404 2.7ms
+
+Started GET "/users" for 10.0.2.2 at 2017-12-21 06:53:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 761ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/attachments/34a7050163c5c683f5ff64199cbddd5114bc8c57/store/ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18/cd_image" for 10.0.2.2 at 2017-12-21 06:53:15 +0000
+Started GET "/attachments/e688b240d003f977945a7ad789be426d814ed305/store/361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a/cd_image" for 10.0.2.2 at 2017-12-21 06:53:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: Could not find attachment by id: ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18
+Refile::App: Could not find attachment by id: 361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a
+Refile::App: [2017-12-21 06:53:15 +0000] GET "/34a7050163c5c683f5ff64199cbddd5114bc8c57/store/ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18/cd_image" 404 6.1ms
+
+Refile::App: [2017-12-21 06:53:15 +0000] GET "/e688b240d003f977945a7ad789be426d814ed305/store/361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a/cd_image" 404 3.0ms
+
+Started GET "/" for 10.0.2.2 at 2017-12-21 06:53:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/34a7050163c5c683f5ff64199cbddd5114bc8c57/store/ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18/cd_image" for 10.0.2.2 at 2017-12-21 06:53:17 +0000
+Started GET "/attachments/e688b240d003f977945a7ad789be426d814ed305/store/361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a/cd_image" for 10.0.2.2 at 2017-12-21 06:53:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: Could not find attachment by id: ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18
+Refile::App: Could not find attachment by id: 361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a
+Refile::App: [2017-12-21 06:53:17 +0000] GET "/34a7050163c5c683f5ff64199cbddd5114bc8c57/store/ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18/cd_image" 404 21.6ms
+
+Refile::App: [2017-12-21 06:53:17 +0000] GET "/e688b240d003f977945a7ad789be426d814ed305/store/361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a/cd_image" 404 3.5ms
+
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered top/index.html.erb within layouts/application (11.2ms)
+  [1m[36mAdminster Load (1.4ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 297ms (Views: 269.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/attachments/34a7050163c5c683f5ff64199cbddd5114bc8c57/store/ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18/cd_image" for 10.0.2.2 at 2017-12-21 06:53:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: Could not find attachment by id: ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18
+Refile::App: [2017-12-21 06:53:18 +0000] GET "/34a7050163c5c683f5ff64199cbddd5114bc8c57/store/ae3ea7ab8d5ba23e049d16238adcde9ad160c2f11cd4838bb852b7072d18/cd_image" 404 1.7ms
+
+Started GET "/attachments/e688b240d003f977945a7ad789be426d814ed305/store/361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a/cd_image" for 10.0.2.2 at 2017-12-21 06:53:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: Could not find attachment by id: 361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a
+Refile::App: [2017-12-21 06:53:18 +0000] GET "/e688b240d003f977945a7ad789be426d814ed305/store/361315dac756b31017da23279cdc0ca97aa662aa8e0f53553387e3f8010a/cd_image" 404 2.4ms
+
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 06:58:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 5.8ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/adminsters/edit_user_details.html.erb:85: syntax error, unexpected keyword_ensure, expecting keyword_end
+/vagrant/Cosin/app/views/adminsters/edit_user_details.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/adminsters/edit_user_details.html.erb:85: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/adminsters/edit_user_details.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:03:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/adminsters/edit_user_details.html.erb:85: syntax error, unexpected keyword_ensure, expecting keyword_end
+/vagrant/Cosin/app/views/adminsters/edit_user_details.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/adminsters/edit_user_details.html.erb:85: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/adminsters/edit_user_details.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:04:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/adminsters/edit_user_details.html.erb:85: syntax error, unexpected keyword_ensure, expecting keyword_end
+/vagrant/Cosin/app/views/adminsters/edit_user_details.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/adminsters/edit_user_details.html.erb:85: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/adminsters/edit_user_details.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:06:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/adminsters/edit_user_details.html.erb:85: syntax error, unexpected keyword_ensure, expecting keyword_end
+/vagrant/Cosin/app/views/adminsters/edit_user_details.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/adminsters/edit_user_details.html.erb:85: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/adminsters/edit_user_details.html.erb:87: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:10:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (25.5ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/adminsters/edit_user_details.html.erb:17:in `_app_views_adminsters_edit_user_details_html_erb___825584925_92279560'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:12:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (29.6ms)
+  [1m[36mAdminster Load (1.8ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1361ms (Views: 1334.0ms | ActiveRecord: 8.9ms)
+
+
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:13:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0jIZ40UKFVcVb4eSpLVzqozxgpyxGxhOo/CCRrMlMGKzJ8PJmkVd2m7VyLA3x5aTZJwpLzSh4iSRgF48WvI7nw==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (21.5ms)
+Completed 500 Internal Server Error in 408ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__1000958090__637561788'
+app/controllers/users_controller.rb:22:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:14:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0jIZ40UKFVcVb4eSpLVzqozxgpyxGxhOo/CCRrMlMGKzJ8PJmkVd2m7VyLA3x5aTZJwpLzSh4iSRgF48WvI7nw==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (28.4ms)
+Completed 500 Internal Server Error in 510ms (ActiveRecord: 9.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__236406575_100984710'
+app/controllers/users_controller.rb:22:in `update'
+Started GET "/users/4/edit" for 10.0.2.2 at 2017-12-21 07:14:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__236406575_96652540'
+Started GET "/users/4/edit" for 10.0.2.2 at 2017-12-21 07:14:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__236406575_101403590'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:14:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (26.6ms)
+  [1m[36mAdminster Load (1.3ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1289ms (Views: 1265.6ms | ActiveRecord: 7.5ms)
+
+
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:14:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BilItS9oEWizJBXTtgzD+PbjNd4fGG598tw3UFuadeBnPJKf8CdZ5cieWvElfibBHo6ebZqilBfArOsqsk1+HQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__236406575_97733830'
+app/controllers/users_controller.rb:22:in `update'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:17:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (3.2ms)
+  [1m[36mAdminster Load (1.7ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 297ms (Views: 277.2ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:17:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A4fDS+WCNOzV8Wcq3AyiA8oWtyM+UOl367AmwMeOMENikhlhOs18Ya5LKAhPfkc6InsckLvqEx3ZwPq6Llk7vg==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (17.8ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__236406575__634830218'
+app/controllers/users_controller.rb:22:in `update'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:18:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (37.0ms)
+  [1m[36mAdminster Load (1.8ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1407ms (Views: 1327.6ms | ActiveRecord: 11.5ms)
+
+
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:18:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2BR2Rf2/jl2TmnNs8uBEKdJzhp+yH73Le3mq/jWzhEm5AaxvIvDG0OggPE5hkqEQOh4tLDelR6FJCXaE3GSPtA==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (27.3ms)
+Completed 500 Internal Server Error in 473ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__790800853__631558678'
+app/controllers/users_controller.rb:22:in `update'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:27:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (2.3ms)
+  [1m[36mAdminster Load (1.6ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 280ms (Views: 254.0ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:27:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f1RP0sHzZopyER5ocKQzW+5KTrht8PGRy82BvFioa8MeQZX4HrwuBwmrUUrj1tZiBiflC+hKC/v5vV3GsX9gPg==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__790800853__627615188'
+app/controllers/users_controller.rb:22:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:43:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f1RP0sHzZopyER5ocKQzW+5KTrht8PGRy82BvFioa8MeQZX4HrwuBwmrUUrj1tZiBiflC+hKC/v5vV3GsX9gPg==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都鹿児島", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__790800853_90789320'
+app/controllers/users_controller.rb:22:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:47:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f1RP0sHzZopyER5ocKQzW+5KTrht8PGRy82BvFioa8MeQZX4HrwuBwmrUUrj1tZiBiflC+hKC/v5vV3GsX9gPg==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb__790800853__629962348'
+app/controllers/users_controller.rb:22:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:51:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f1RP0sHzZopyER5ocKQzW+5KTrht8PGRy82BvFioa8MeQZX4HrwuBwmrUUrj1tZiBiflC+hKC/v5vV3GsX9gPg==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 2.2ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/users/edit.html.erb:85: syntax error, unexpected keyword_else, expecting keyword_end
+         else 
+             ^):
+  
+app/views/users/edit.html.erb:85: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/users_controller.rb:22:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:52:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f1RP0sHzZopyER5ocKQzW+5KTrht8PGRy82BvFioa8MeQZX4HrwuBwmrUUrj1tZiBiflC+hKC/v5vV3GsX9gPg==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (11.4ms)
+  [1m[36mAdminster Load (1.9ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 253ms (Views: 243.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 07:59:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (32.1ms)
+  [1m[36mAdminster Load (1.9ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1358ms (Views: 1259.7ms | ActiveRecord: 13.2ms)
+
+
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 07:59:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8NbvIo3L4h16EpKsZy/EnOepZIutJJ0gGNXlm2dVCfCRwzUIUoSqkAGo3Y70XSGlD8TPOCieZ0oqpTnhjoICDQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (27.3ms)
+Completed 500 Internal Server Error in 396ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb___824926438_75997470'
+app/controllers/users_controller.rb:24:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 08:04:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8NbvIo3L4h16EpKsZy/EnOepZIutJJ0gGNXlm2dVCfCRwzUIUoSqkAGo3Y70XSGlD8TPOCieZ0oqpTnhjoICDQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.4ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/users/edit.html.erb:88: syntax error, unexpected keyword_else, expecting keyword_end
+         else 
+             ^
+/vagrant/Cosin/app/views/users/edit.html.erb:103: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/users/edit.html.erb:88: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/users/edit.html.erb:103: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/controllers/users_controller.rb:24:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 08:05:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8NbvIo3L4h16EpKsZy/EnOepZIutJJ0gGNXlm2dVCfCRwzUIUoSqkAGo3Y70XSGlD8TPOCieZ0oqpTnhjoICDQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 1.2ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/users/edit.html.erb:88: syntax error, unexpected keyword_else, expecting keyword_end
+         else 
+             ^):
+  
+app/views/users/edit.html.erb:88: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/users_controller.rb:24:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 08:05:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8NbvIo3L4h16EpKsZy/EnOepZIutJJ0gGNXlm2dVCfCRwzUIUoSqkAGo3Y70XSGlD8TPOCieZ0oqpTnhjoICDQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/users/edit.html.erb:101: syntax error, unexpected keyword_ensure, expecting keyword_end
+/vagrant/Cosin/app/views/users/edit.html.erb:103: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/users/edit.html.erb:101: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/edit.html.erb:103: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:24:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 08:05:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8NbvIo3L4h16EpKsZy/EnOepZIutJJ0gGNXlm2dVCfCRwzUIUoSqkAGo3Y70XSGlD8TPOCieZ0oqpTnhjoICDQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 1.8ms)
+
+
+  
+SyntaxError (/vagrant/Cosin/app/views/users/edit.html.erb:88: syntax error, unexpected keyword_else, expecting keyword_end
+         else 
+             ^
+/vagrant/Cosin/app/views/users/edit.html.erb:97: syntax error, unexpected keyword_end, expecting end-of-input
+ end 
+    ^):
+  
+app/views/users/edit.html.erb:88: syntax error, unexpected keyword_else, expecting keyword_end
+app/views/users/edit.html.erb:97: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/users_controller.rb:24:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 08:06:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8NbvIo3L4h16EpKsZy/EnOepZIutJJ0gGNXlm2dVCfCRwzUIUoSqkAGo3Y70XSGlD8TPOCieZ0oqpTnhjoICDQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb___824926438__645737388'
+app/controllers/users_controller.rb:24:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 08:12:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8NbvIo3L4h16EpKsZy/EnOepZIutJJ0gGNXlm2dVCfCRwzUIUoSqkAGo3Y70XSGlD8TPOCieZ0oqpTnhjoICDQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (190.7ms)
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `admin_signed_in?' for #<#<Class:0x09065ff0>:0xb41f0fe0>):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:       <% if admin_signed_in? %>
+    18:  <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb___824926438__636517908'
+app/controllers/users_controller.rb:24:in `update'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:25:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (39.0ms)
+  [1m[36mAdminster Load (0.9ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1361ms (Views: 1277.9ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:25:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (2.7ms)
+  [1m[36mAdminster Load (1.0ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 239ms (Views: 218.9ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 08:25:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/kzzfLMqPU6UPWZNrys4a51+XHThE11oFN5RD2psVnifWSlWbGV1w++HKW88Wd1SdRP3x2SppwImro11g7tdhQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都練馬区", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 377ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb___757721136__639796338'
+app/controllers/users_controller.rb:21:in `update'
+Started PATCH "/users/4" for 10.0.2.2 at 2017-12-21 08:35:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/kzzfLMqPU6UPWZNrys4a51+XHThE11oFN5RD2psVnifWSlWbGV1w++HKW88Wd1SdRP3x2SppwImro11g7tdhQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都練馬区", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (15.7ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:      </div>
+    15: 
+    16:      <div class="col-sm-12 col-md-9">
+    17:        <% if @user.id == current_user.id %>
+    18:        <%= form_for(@user) do |f| %>
+    19: 
+    20:        <% if @user.errors.any? %>
+  
+app/views/users/edit.html.erb:17:in `_app_views_users_edit_html_erb___757721136__627816008'
+app/controllers/users_controller.rb:21:in `update'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:41:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (39.3ms)
+  [1m[36mAdminster Load (1.1ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1399ms (Views: 1311.3ms | ActiveRecord: 13.9ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:41:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"thCaOqan4kwvvR3n+dib7R2Z9K/Aj7EYrdJGBiCK+1XXBUAQeeiqwVQHUsVqqn7U9fRfHEU1S3Kfopp8yV3wqA==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (3.1ms)
+  [1m[36mAdminster Load (1.7ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 605ms (Views: 226.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:44:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for AdminstersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:44:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for AdminstersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:45:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (52.0ms)
+  [1m[36mAdminster Load (1.7ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1380ms (Views: 1275.7ms | ActiveRecord: 16.0ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:45:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PopY5/MDQkdwj3lTX9rkWnf2L/wAOFh2FfS6y5fOkc1fn4LNLEwKygs1NnHMqAFjn5uET4WCohwnhGaxfhmaMA==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都練馬区", "phone"=>"00000000000", "email"=>"a@a", "password"=>"[FILTERED]"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :password
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (4.9ms)
+  [1m[36mAdminster Load (1.2ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 638ms (Views: 241.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:46:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (35.7ms)
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:46:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (4.2ms)
+  [1m[36mAdminster Load (1.3ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdminster Load (1.4ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1679ms (Views: 1596.7ms | ActiveRecord: 13.2ms)
+
+
+Completed 200 OK in 691ms (Views: 659.6ms | ActiveRecord: 4.3ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:46:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P8TzMmtixT08KECZMlUEU77S4RtE5jV+vZmjfInv1xJe0SkYtC2NsEeSD7uhJ+FqVr9KqMFczxSP6X8GYDjc7w==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都練馬区", "phone"=>"00000000000", "email"=>"a@a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (6.3ms)
+  [1m[36mAdminster Load (1.3ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 567ms (Views: 238.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:48:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (44.4ms)
+  [1m[36mAdminster Load (1.7ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1381ms (Views: 1294.5ms | ActiveRecord: 13.7ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:48:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aWaI4ko7W9UeqgxdhNtcvk4BNaX5z2tBB832wsVR2IsIc1LIlXQTWGUQQ38XqbmHpmyeFnx1kSs1vSq4LIbTdg==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都練馬区", "phone"=>"00000000000", "email"=>"a@a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (3.0ms)
+  [1m[36mAdminster Load (1.7ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 107182ms (Views: 241.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:52:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (29.9ms)
+  [1m[36mAdminster Load (1.6ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1367ms (Views: 1280.5ms | ActiveRecord: 13.5ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:52:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AzIs6DEFR5pCMSeSS79oI+lu/TZd95zVXj7AyvjIq/FiJ/bC7koPFzmLaLDYzY0aAQNWhdhNZr9sThywER+gDA==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (4.1ms)
+  [1m[36mAdminster Load (1.5ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 621ms (Views: 230.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:53:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for AdminstersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:53:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (29.1ms)
+  [1m[36mAdminster Load (2.3ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1379ms (Views: 1288.1ms | ActiveRecord: 17.3ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:53:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b4IQOgZ0vzP6K6xe2VNqXj58Nlc9zl9iNY26SPcjwBkOl8oQ2Tv3voGR43xKIY9n1hGd5Lh0pQgH/WYyHvTL5A==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (4.8ms)
+  [1m[36mAdminster Load (1.4ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 603ms (Views: 237.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:54:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (39.1ms)
+  [1m[36mAdminster Load (1.4ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1422ms (Views: 1333.5ms | ActiveRecord: 16.2ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:54:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NCMJLyIYj8xrp85i7G5+Stu3gfUpEjBy5ClBip5ShKBVNtMF/VfHQRAdgUB/HJtzM9oqRqyoyhjWWZ3wd4WPXQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (8.6ms)
+  [1m[36mAdminster Load (1.2ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 635ms (Views: 255.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 08:55:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (44.5ms)
+  [1m[36mAdminster Load (1.7ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1444ms (Views: 1359.7ms | ActiveRecord: 13.2ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 08:55:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EqP0m1J/1Yus0RGVreux00kiAT/XSRKurNcxwxPUJp1zti6xjTCdBtdrXrc+mVTqoU+qjFLz6MSep+25+gMtYA==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[33mUPDATE "users" SET "address" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["address", "東京都"], ["updated_at", "2017-12-21 08:55:55.028158"], ["id", 4]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 11.0ms)
+
+
+  
+NoMethodError (undefined method `adminsters_path' for #<AdminstersController:0xb6256a8c>):
+  
+app/controllers/adminsters_controller.rb:23:in `update'
+Started GET "/adminsters/4" for 10.0.2.2 at 2017-12-21 09:02:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for AdminstersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/adminsters/users/4/edit" for 10.0.2.2 at 2017-12-21 09:02:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#edit_user_details as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (30.9ms)
+  [1m[36mAdminster Load (1.2ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1333ms (Views: 1242.0ms | ActiveRecord: 14.9ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 09:03:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Y1Hc+JsrF9rYJHz+wFaV9cbkHofE+YJfFa1UEp6ZO+MmJ1ZPSPk0hDa3tFoc79uP3Y7yZqpHGNOJmkqo61vEg==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"２１２３３３３", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (3.1ms)
+  [1m[36mAdminster Load (1.4ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 580ms (Views: 227.2ms | ActiveRecord: 3.1ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 09:03:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zt8xmM3glXQRXbms/3mvRDnRZSft35I3xRDBCxW35zwHyuuyEq/d+Wrn9o5sC0p90bzOlGhlaF33YB1x/GDswQ==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering adminsters/edit_user_details.html.erb within layouts/application
+  Rendered adminsters/edit_user_details.html.erb within layouts/application (2.9ms)
+  [1m[36mAdminster Load (1.5ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 274ms (Views: 265.6ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/adminsters/4" for 10.0.2.2 at 2017-12-21 09:03:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CpUm88Xwo+r68kXuwe4Syz0BKbrAjByCM8vF18T1Z2drgPzZGr/rZ4FICsxSnPfy1WyCCUU25ugBuxmtLSJsmg==", "user"=>{"first_name"=>"たま", "first_name_kana"=>"たま", "last_name"=>"佐藤", "last_name_kana"=>"さとう", "post_code"=>"0000000", "address"=>"東京都", "phone"=>"00000000000", "email"=>"a@a"}, "commit"=>"更新", "id"=>"4"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `adminsters_path' for #<AdminstersController:0xb4005884>):
+  
+app/controllers/adminsters_controller.rb:23:in `update'

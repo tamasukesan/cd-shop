@@ -14,13 +14,16 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
-		if @user.update(user_params)
-			sign_in(@user, bypass: true) 
-        	redirect_to user_path(@user.id), notice: "更新しました。"
-        else
-        	#redirect_to edit_user_path(@user.id), alert: "変更できませんでした。もう一度やり直してください。"
-        	render 'edit'
-        end
+		if params[:password].present? || params[:password_confirmation].present?
+			if @user.update(user_params)
+				sign_in(@user, bypass: true) 
+	        	redirect_to user_path(@user.id), notice: "更新しました。"
+	        else
+	        	render 'edit'
+	        end
+	    else
+	        render 'edit'
+	    end
 	end
 
 

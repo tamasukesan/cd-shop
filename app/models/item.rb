@@ -19,7 +19,7 @@ class Item < ApplicationRecord
    
 	accepts_nested_attributes_for :discs, allow_destroy: true
 
-	validates :cd_image
+	validates :cd_image,
 			  :album_name,
 			  :artist_name,   
 			  :label_name, 

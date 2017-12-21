@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20171219112727) do
     t.string "billing_address"
     t.datetime "buy_at"
     t.integer "total"
-    t.integer "status", limit: 1, default: 0, null: false
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

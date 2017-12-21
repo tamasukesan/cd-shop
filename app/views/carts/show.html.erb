@@ -44,14 +44,14 @@
 								<%= cart_item.quantity %> 個
 							</td>
 							<td>
-								<%#= (cart_item.quantity*cart_item.item.price).to_s(:delimited) %> 円
+								<%= (cart_item.quantity*cart_item.item.price).to_s(:delimited) %> 円
 							</td>
 							<td>
 								<%= link_to "削除", cart_item, method: :delete, remote: true, class: 'btn btn-danger'  %>
 							</td>
 						</tr>
-						<%# quantity_count += cart_item.quantity %>
-						<%# sum_count += cart_item.quantity*cart_item.item.price %>
+						<% quantity_count += cart_item.quantity %>
+						<% sum_count += cart_item.quantity*cart_item.item.price %>
 					<% end.empty? %>
 					    <p>カートに商品は入っていません。</p>
 					<% end %>
@@ -62,7 +62,6 @@
 
 			<h2>発送先住所</h2>
 
-				<%= form_for(@order) do |f| %>
 			        <% if @order.errors.any? %>
 			            <div id="error_explanation">
 			                <h2><%= @order.errors.count %>件のエラーが発生しました！</h2>
@@ -73,7 +72,7 @@
 			                </ul>
 			            </div>
 			        <% end %>
-
+				<%= form_for(@order) do |f| %>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>受取人名 苗字 かな</label>

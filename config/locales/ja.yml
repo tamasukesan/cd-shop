@@ -1,7 +1,10 @@
+ja.yml
 ja:
   activerecord:
     models:
       item: 商品
+      user: ユーザー
+      order: 注文履歴
     attributes:
       item:
           album_name: アルバム名
@@ -14,3 +17,19 @@ ja:
           price: 価格
           item_status: 販売状況
           cd_image: カーバーは
+      user:
+        first_name: 名前
+        last_name: 苗字
+        first_name_kana: 名前(カナ)
+        last_name_kana: 苗字(カナ)
+        post_code: 郵便番号
+        address: 住所
+        phone: 電話番号
+      order:
+        billing_first_name: 名前
+        billing_last_name: 苗字
+        billing_first_name_kana: 名前(カナ)
+        billing_last_name_kana: 苗字(カナ)
+        billing_post_code: 郵便番号
+        billing_phone: 電話番号
+        billing_address: 送り先

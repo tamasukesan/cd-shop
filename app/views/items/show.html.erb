@@ -30,23 +30,23 @@
 	<div class="row"> 
 		<div class="col-md-12">
 		<% for disc in @item.discs %>			
-			<table class="table">
+			<table class="table col-md-8">
 				<thead>
 					<tr>
-						<th class="table-header" colspan="3">ディスク<%= disc.disc_number%>&nbsp;&nbsp;&nbsp;&nbsp;<%= disc.disc_name %></th>
+						<th class="table-header center" colspan="3">ディスク<%= disc.disc_number%>&nbsp;&nbsp;&nbsp;&nbsp;<%= disc.disc_name %></th>
 					</tr>
 					<tr>
-						<th>番号</th>
-						<th>歌手</th>
-						<th>曲名</th>
+						<th class="col-md-4 center">番号</th>
+						<th class="col-md-4 center">歌手</th>
+						<th class="col-md-4 center">曲名</th>
 					<tr>
 				</thead>
 				<tbody>
 					<% for track in disc.tracks %>
 						<tr>
-								<td><%= track.track_number %></td>
-								<td><%= track.artist_name %></td>
-								<td><%= track.track_name %></td>		
+								<td class="center"><%= track.track_number %></td>
+								<td class="center"><%= track.artist_name %></td>
+								<td class="center"><%= track.track_name %></td>		
 						</tr>
 					<% end %>		
 				</tbody>

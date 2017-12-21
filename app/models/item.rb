@@ -2,7 +2,7 @@ class Item < ApplicationRecord
 	belongs_to :adminster
     has_many :order_items
     has_many :discs, :dependent => :destroy
-	has_many :tracks
+	has_many :tracks, :dependent => :destroy
 	attachment :image
 
 	has_many :carts

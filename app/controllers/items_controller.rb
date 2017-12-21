@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+	# before_action :authenticate_user!, except: [:top, :show]
 	def new
 		@item = Item.new
 		1.times do

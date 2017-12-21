@@ -1,5 +1,5 @@
 class AdminstersController < ApplicationController
-	
+
 	def top
 		@items = Item.all
 	end
@@ -8,11 +8,19 @@ class AdminstersController < ApplicationController
 		@users = User.all
 	end
 
+	def show_user
+		
+	end
+
 	def edit_user_details
 		@user = User.find(params[:id])
-		# adminのデータ持ってくるのを記述する
 	end
 
 	def update
+
+	end
+
+	def destroy
+		
 	end
 end

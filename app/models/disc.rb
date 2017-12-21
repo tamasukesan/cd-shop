@@ -4,5 +4,7 @@ class Disc < ApplicationRecord
 
 
 	accepts_nested_attributes_for :tracks, :allow_destroy => true
+
+	default_scope -> {order(disc_number: :asc)}
 end
 

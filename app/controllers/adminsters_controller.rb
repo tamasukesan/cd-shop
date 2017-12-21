@@ -17,7 +17,7 @@ class AdminstersController < ApplicationController
 	end
 
 	def update
-
+		@user = User.find(params[:id])
 	end
 
 	def destroy

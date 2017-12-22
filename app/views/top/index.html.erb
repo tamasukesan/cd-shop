@@ -18,8 +18,8 @@
       <% @items.each do |item| %>
         <div class="col-sm-3 row-eq-height">
           <%= form_for(@cart) do |f| %>
-          <%= f.hidden_field :item_id, value: item.id %>
             <div class="panel panel-primary">
+              <%= f.hidden_field :item_id, value: item.id %>
               <div class="panel-heading panel-size">
                 <h4><%= item.album_name %></h4>
                 <br>
@@ -35,7 +35,7 @@
               <div class="panel-footer">
                 価格 | ¥<%= item.price.to_s(:delimited)%>
                 <% if user_signed_in? %>
-                  <%= f.select :quantity, [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30], :prompt => '1', class: "quantity-form" %>
+                  <%= f.select :quantity, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30], class: "quantity-form" %>
                   <div class="pull-right" "btn btn-default" aria-hidden="true">
                     <%= f.submit "カート",class: "btn, btn-primary pull-right" %>
                   </div>

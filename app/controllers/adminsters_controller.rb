@@ -8,6 +8,11 @@ class AdminstersController < ApplicationController
 		@users = User.all
 	end
 
+	def show
+		@users = User.all
+		# @user = User.find(params[:id])
+	end
+
 	def show_user
 		
 	end
@@ -25,7 +30,7 @@ class AdminstersController < ApplicationController
         end
 	end
 
-<<<<<<< HEAD
+
 	def destroy
 		
 	end
@@ -34,7 +39,6 @@ class AdminstersController < ApplicationController
 		params.require(:user).permit(:first_name, :last_name, :first_name_kana, :last_name_kana, :post_code, :address, :phone, :leave, :update_at, :email)
 	end
 
-=======
 	
 
 end

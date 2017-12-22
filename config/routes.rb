@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update, :index]
   resources :adminsters, only: [:show, :update, :destroy]
 
-  get '/adminsters/items' => 'adminsters#top', as: "adminsters_top"
+  #get '/adminsters/items' => 'adminsters#top', as: "adminsters_top"
   get '/adminsters/users' => 'adminsters#manage_users', as: "adminsters_manage_users"
-  get '/adminsters/users/:id/edit(.:format)' => 'adminsters#edit_user_details', as: "adminsters_edit_user_details"
+  get '/adminsters/user/:id/edit(.:format)' => 'adminsters#edit_user_details', as: "adminsters_edit_user_details"
 
 
   root "top#index"

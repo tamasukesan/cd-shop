@@ -62,30 +62,28 @@
 			</div>
 
 			<h2>発送先住所</h2>
-
-			        <% if @order.errors.any? %>
-			            <div id="error_explanation">
-			                <h2><%= @order.errors.count %>件のエラーが発生しました！</h2>
-			                <ul>
-			                  <% @order.errors.full_messages.each do |message| %>
-			                    <li><%= message %></li>
-			                  <% end %>
-			                </ul>
-			            </div>
-			        <% end %>
+				<% if flash[:error].present? %>
+					<ul class="errors">
+						<%= flash[:error].count %>件エラー
+						<% flash[:error].each do |e| %>
+							<li><%= e %></li>
+							<% @user = @user_valid %>
+						<% end %>
+					</ul>
+				<% end %>
 				<%= form_for(@order) do |f| %>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>受取人名 苗字 かな</label>
-							    <%= f.text_field :billing_first_name, class:"form-control", placeholder:"苗字", value: @user.last_name %>
-							    <%= f.text_field :billing_first_name_kana, class:"form-control", placeholder:"苗字(カナ)", value: @user.last_name_kana %>
+							    <%= f.text_field :billing_last_name, class:"form-control", placeholder:"苗字", value: @user.last_name %>
+							    <%= f.text_field :billing_last_name_kana, class:"form-control", placeholder:"苗字(カナ)", value: @user.last_name_kana %>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>受取人名 名前 かな</label>
-						        <%= f.text_field :billing_last_name, class:"form-control", placeholder:"名前", value: @user.first_name  %>
-						        <%= f.text_field :billing_last_name_kana, class:"form-control", placeholder:"名前(カナ)", value: @user.first_name_kana  %>
+						        <%= f.text_field :billing_first_name, class:"form-control", placeholder:"名前", value: @user.first_name  %>
+						        <%= f.text_field :billing_first_name_kana, class:"form-control", placeholder:"名前(カナ)", value: @user.first_name_kana  %>
 						</div>
 					</div>
 		            <div class="col-md-12">

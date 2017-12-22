@@ -3,6 +3,7 @@ class CartsController < ApplicationController
 		@cart_items = current_user.carts
 		@order = Order.new
 		@user = current_user
+		@user_valid = $user_valid
 	end
 
 	def create
@@ -21,7 +22,6 @@ class CartsController < ApplicationController
 
 	def destroy
 		@cart_item = Cart.find(params[:id])
-		binding.pry
 		@cart_item.destroy
 		redirect_to cart_path(current_user)
 	end

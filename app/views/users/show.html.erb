@@ -69,12 +69,12 @@
 							<p><%= order.created_at.strftime('%Y年%m月%d日 %H:%M') %></p>
 						<h4>購入者</h4>
 						<p>
-							<%= order.billing_first_name %>
 							<%= order.billing_last_name %>
+							<%= order.billing_first_name %>
 						</p>
 						<h4>送付先</h4>
 						<p>
-							<%= order.billing_post_code %>  
+							<%= order.billing_post_code %>
 							<%= order.billing_address %>
 						</p>
 						<h4>ステータス</h4>

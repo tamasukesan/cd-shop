@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :orders, only:[:create,:show, :index]
   resources :order_items
   resources :carts, only: [:show,:create,:update,:destroy]
-  resources :users, only: [:show, :edit, :update, :index]
+  resources :users, only: [:show, :edit, :update, :index, :destroy]
   resources :adminsters, only: [:show, :update, :destroy]
 
   #get '/adminsters/items' => 'adminsters#top', as: "adminsters_top"

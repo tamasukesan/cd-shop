@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
 	def show
-		@cart_items = current_user.cart
+		@cart_items = current_user.carts
 		@order = Order.new
 		@user = current_user
 	end
@@ -21,8 +21,9 @@ class CartsController < ApplicationController
 
 	def destroy
 		@cart_item = Cart.find(params[:id])
+		binding.pry
 		@cart_item.destroy
-		redirect_to cart_path
+		redirect_to cart_path(current_user)
 	end
 
 	private

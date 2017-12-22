@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :phone, presence: true, format: { with: /\A\d{10}\z|\A\d{11}\z/ }
   # validates :password, presence: true
 
-  has_many :cart
+  has_many :carts
   has_many :orders
 
 end

@@ -6,7 +6,7 @@
 
     <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'  %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
 <body>
@@ -31,7 +31,7 @@
                             <%= link_to ' Cart list', cart_path(current_user.id), class: "glyphicon glyphicon-home" %>
                             </li>
                           <li>
-                            <%= link_to ' logout', destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %>
+                            <%= link_to ' logout', destroy_user_session_path, class: "glyphicon glyphicon-log-out" %>
                           </li>
                       </ul>
                       <ul class="nav navbar-nav navbar-right">
@@ -54,7 +54,7 @@
                 </li>
                 <li><%= link_to ' Users', adminsters_manage_users_path, class: "glyphicon glyphicon-user" %>
                 </li>
-                <li><%= link_to ' logout', destroy_adminster_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %></li>
+                <li><%= link_to ' logout', destroy_adminster_session_path, class: "glyphicon glyphicon-log-out" %></li>
                 <li><%= link_to ' New item', new_item_path, class: "glyphicon glyphicon-star" %></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">

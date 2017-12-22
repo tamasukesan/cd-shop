@@ -100,7 +100,8 @@
 		  	<div class="col-md-4">
 			  <div class="form-group">
 		  		<%= f.label :editor, "編集者" %>
-		  		<%= f.text_field :editor, class: "form-control" %>
+		  		<%= f.text_field :editor, class: "form-control", value: current_adminster.name %>
+
 		  	  </div>
 		  	</div>
 			

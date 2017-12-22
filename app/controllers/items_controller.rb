@@ -28,8 +28,7 @@ class ItemsController < ApplicationController
 
 	def update
 		@item = Item.find(params[:id])
-		@item.update(item_params)
-		redirect_to items_path
+		@item.adminster_id = current_adminster.id
 		if @item.update(item_params)
 			redirect_to item_path
 		else
@@ -52,6 +51,7 @@ class ItemsController < ApplicationController
 
 	def show
 		@item = Item.find(params[:id])
+		@cart = Cart.new
 	end
 
 	private

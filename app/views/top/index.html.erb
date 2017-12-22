@@ -1,34 +1,58 @@
+<head>
+  <title>Top#index</title>
+</head>
+
+
+<body>
+<div class="text-center">
+<%= paginate @items %>
+</div>
+
 <div class="container">
-        <% if flash[:notice] %>
+      <% if flash[:notice] %>
           <p id="notice">
             <%= flash[:notice] %>
           </p>
         <% end %>
-
-  <div class="row row-eq-height">
-  	<% @items.each do |item| %>
-          <div class="col-sm-3">
-          	<%= form_for(@cart) do |f| %>
-              	<div class="panel panel-primary">
-              		<%= f.hidden_field :item_id, value: item.id %>
-              		  <div class="panel-heading panel-size">
-                      <h4><%= item.album_name %></h4>
-              			<br>
-              			  <%= item.label_name %>
-              		  </div>
-              		  <div class="panel-body">
-              			   <%= link_to attachment_image_tag item, :cd_image, class: "img-thumbnail", fallback: "no_image.jpg"%></div>
-                  	    <div class="panel-footer">
-                  		     <div class="">
-                        			価格 | ¥<%= item.price.to_s(:delimited) %>
-                        			<%= f.select :quantity, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30], :prompt => '0', class: "quantity-form" %>
-                  			     <%= f.submit "カート", class: "btn, btn-primary pull-right" %>
-                  		     </div>
-                  	    </div>
-              	</div>
-            <% end %>
-         </div>
+  <div class="row">
+      <% @items.each do |item| %>
+        <div class="col-sm-3 row-eq-height">
+          <%= form_for(@cart) do |f| %>
+          <%= f.hidden_field :item_id, value: item.id %>
+            <div class="panel panel-primary">
+              <div class="panel-heading panel-size">
+                <h4><%= item.album_name %></h4>
+                <br>
+                <%= item.artist_name %>
+              </div>
+              <div class="panel-body">
+                <% if item.cd_image.nil? %>
+                  <%= image_tag 'no_image.jpg', class:"img-responsive" %>
+              <% else %>
+                  <%= attachment_image_tag(item, :cd_image, class:"img-responsive")%>
+                <% end %>
+              </div>
+              <div class="panel-footer">
+                価格 | ¥<%= item.price.to_s(:delimited)%>
+                <% if user_signed_in? %>
+                  <%= f.select :quantity, [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30], :prompt => '1', class: "quantity-form" %>
+                  <div class="pull-right" "btn btn-default" aria-hidden="true">
+                    <%= f.submit "カート",class: "btn, btn-primary pull-right" %>
+                  </div>
+                <% else %>
+                <% end %>
+                </div>
+            </div>
+          <% end %>
+        </div>
     <% end %>
   </div>
 </div>
 
+<div class="text-center">
+<%= paginate @items %>
+</div>
+
+<br><br>
+
+</body>

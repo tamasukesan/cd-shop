@@ -6,11 +6,9 @@ class CartsController < ApplicationController
 	end
 
 	def create
-		# @order = current_order
 		@cart = Cart.new(cart_params)
 		@cart.user_id = current_user.id
 		@cart.save
-		# session[:order_id] = @cart_item.id
 		redirect_to cart_path(current_user.id)
 	end
 
@@ -22,11 +20,9 @@ class CartsController < ApplicationController
 	# end
 
 	def destroy
-		# @order = current_order
 		@cart_item = Cart.find(params[:id])
 		@cart_item.destroy
 		redirect_to cart_path
-		# @cart_items = @order.order_items
 	end
 
 	private

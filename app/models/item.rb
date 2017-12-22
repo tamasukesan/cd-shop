@@ -2,7 +2,7 @@ class Item < ApplicationRecord
 	belongs_to :adminster
     has_many :order_items
     has_many :discs, :dependent => :destroy
-	has_many :tracks
+	has_many :tracks, :dependent => :destroy
 	attachment :image
 
 	has_many :carts
@@ -19,7 +19,8 @@ class Item < ApplicationRecord
    
 	accepts_nested_attributes_for :discs, allow_destroy: true
 
-	validates :album_name,
+	validates :cd_image,
+			  :album_name,
 			  :artist_name,   
 			  :label_name, 
 			  :genre, 

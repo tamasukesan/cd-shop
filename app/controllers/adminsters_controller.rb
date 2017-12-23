@@ -1,4 +1,5 @@
 class AdminstersController < ApplicationController
+	before_action :authenticate_adminster!
 
 	def top
 		@items = Item.all

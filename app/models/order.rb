@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-    enum status: { 受付中: 0, 商品準備中: 1, 出荷済: 2 }
+    enum status: [ "受付中", "商品準備中", "出荷済" ]
 
 	belongs_to :user
 	has_many :order_items

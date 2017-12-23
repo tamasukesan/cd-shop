@@ -52,18 +52,24 @@ class OrdersController < ApplicationController
 		@orders = Order.all
 	end
 
+    def update
+        @order = Order.find(params[:id])
+        @order.update(order_params)
+        redirect_to adminsters_show_user_path(params[:user_id])
+    end
+
 	private
     def order_params
-    params.require(:order).permit(:user_id, 
-                                  :billing_first_name, 
-                                  :billing_last_name, 
-                                  :billing_first_name_kana, 
-                                  :billing_last_name_kana, 
-                                  :billing_post_code, 
-                                  :billing_phone, 
-                                  :billing_address, 
-                                  :buy_at, 
-                                  :total, 
+    params.require(:order).permit(:user_id,
+                                  :billing_first_name,
+                                  :billing_last_name,
+                                  :billing_first_name_kana,
+                                  :billing_last_name_kana,
+                                  :billing_post_code,
+                                  :billing_phone,
+                                  :billing_address,
+                                  :buy_at,
+                                  :total,
                                   :status)
     end
 

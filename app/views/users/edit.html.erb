@@ -14,7 +14,7 @@
      </div>
 
      <div class="col-sm-12 col-md-9">
-       <% if @user.id == current_user.id %>
+       <% if @user.id == current_user.id || @adminster %>
        <%= form_for(@user) do |f| %>
 
        <% if @user.errors.any? %>
@@ -64,16 +64,7 @@
         <%= f.email_field :email, class: "form-control" %>
       </div>
       <div class="field has-success">
-        <%= f.label :password, "パスワード:" %> <i>(6文字以上)</i><br>
-        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-        <% if @minimum_password_length %>
-        <br />
-        <em><%= @minimum_password_length %> characters minimum</em>
-        <% end %>
-      </div>
-      <div class="field has-success">
-        <%= f.label :password_confirmation, "パスワード（確認）:" %><br>
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+        <%= link_to "パスワードの変更", edit_user_registration_path %>
       </div>
 
       <br>

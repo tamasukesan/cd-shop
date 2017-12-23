@@ -14,7 +14,8 @@ class AdminstersController < ApplicationController
 	end
 
 	def show_user
-		
+		@user = User.find(params[:id])
+		@orders = @user.orders.page(params[:page]).reverse_order
 	end
 
 	def edit_user_details
@@ -24,7 +25,7 @@ class AdminstersController < ApplicationController
 	def update
 		@user = User.find(params[:id])
 		if @user.update(user_params)
-        	redirect_to adminsters_path(@user.id), notice: "更新しました。"
+        	redirect_to adminsters_manage_users_path, notice: "更新しました。"
         else
         	render 'edit_user_details'
         end

@@ -15,6 +15,7 @@ class Item < ApplicationRecord
 	#scope :get_by_artist_name_kana, ->(artist_name_kana) { where("artist_name_kana like ?", "%#{artist_name_kana}
 
 	scope :get_all, ->(search) { where(Item.arel_table[:album_name].matches("%#{search}%").or(Item.arel_table[:artist_name_kana].matches("%#{search}%").or(Item.arel_table[:artist_name].matches("%#{search}%")))) }
+	
 	scope :active, -> {where(deleted:false)}
    
 	accepts_nested_attributes_for :discs, allow_destroy: true

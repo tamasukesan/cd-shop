@@ -6,10 +6,14 @@ class AdminstersController < ApplicationController
 
 	def manage_users
 		@users = User.all
+		@users = @users.get_all params[:search]
 	end
 
 	def show
 		@users = User.all
+		if params[:search].present?
+			@users = @users.get_all params[:search]
+		end
 		# @user = User.find(params[:id])
 	end
 

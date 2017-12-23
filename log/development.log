@@ -31271,3 +31271,289 @@ Processing by AdminstersController#edit_user_details as HTML
 Completed 200 OK in 317ms (Views: 291.1ms | ActiveRecord: 4.0ms)
 
 
+Started DELETE "/adminsters/users/7" for 10.0.2.2 at 2017-12-23 06:59:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ueQtFlTOdk4oKfr39Hhq7UVO9tXfpPpAKvc1vAbj3hppFHflke5RoKDdMt8FgrrnJhOxIwubPt3B1hs0O9w1Gg==", "id"=>"7"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/adminsters/users
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/adminsters/users" for 10.0.2.2 at 2017-12-23 06:59:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminstersController#show as HTML
+  Parameters: {"id"=>"users"}
+  Rendering adminsters/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered adminsters/show.html.erb within layouts/application (4.8ms)
+  [1m[36mAdminster Load (2.1ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 328ms (Views: 302.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/adminsters/sign_out" for 10.0.2.2 at 2017-12-23 07:08:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mAdminster Load (2.9ms)[0m  [1m[34mSELECT  "adminsters".* FROM "adminsters" WHERE "adminsters"."id" = ? ORDER BY "adminsters"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-23 07:08:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered top/index.html.erb within layouts/application (72.2ms)
+Completed 200 OK in 380ms (Views: 351.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/attachments/4d899f9185c1e46e910e5c6bcdb1a8dc5bf1b68e/store/f373dc2a5889292ab123188992390e0a702577d09962951cd40024e243bc/cd_image" for 10.0.2.2 at 2017-12-23 07:08:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/862b9619a90cdea05c0d32e94a7f404ccc6da0ba/store/f0aee628907a26c04fe4804c7d5d034380281372ac57485de85f7b324ad2/cd_image" for 10.0.2.2 at 2017-12-23 07:08:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:08:00 +0000] GET "/4d899f9185c1e46e910e5c6bcdb1a8dc5bf1b68e/store/f373dc2a5889292ab123188992390e0a702577d09962951cd40024e243bc/cd_image" 200 32.7ms
+
+Started GET "/attachments/e37f7db22f61da5da15acef2249cff5d9eba0c18/store/fa137a424a68f6bb53bed2c840b5053f4314a9b487ed6483d5e1b1b80db9/cd_image" for 10.0.2.2 at 2017-12-23 07:08:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:08:00 +0000] GET "/862b9619a90cdea05c0d32e94a7f404ccc6da0ba/store/f0aee628907a26c04fe4804c7d5d034380281372ac57485de85f7b324ad2/cd_image" 200 32.2ms
+
+Started GET "/attachments/24ead281c5a8e736b7a438c92e74e0ac1ee8a4d0/store/9b74b226ee50554428369823f0e0a8c6f90d93da77e372a720bb644df597/cd_image" for 10.0.2.2 at 2017-12-23 07:08:00 +0000
+Refile::App: [2017-12-23 07:08:00 +0000] GET "/e37f7db22f61da5da15acef2249cff5d9eba0c18/store/fa137a424a68f6bb53bed2c840b5053f4314a9b487ed6483d5e1b1b80db9/cd_image" 200 12.2ms
+
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:08:00 +0000] GET "/24ead281c5a8e736b7a438c92e74e0ac1ee8a4d0/store/9b74b226ee50554428369823f0e0a8c6f90d93da77e372a720bb644df597/cd_image" 200 4.1ms
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-12-23 07:08:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 345ms (Views: 343.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-12-23 07:08:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gkRVSM/F+bmmDf49p0bZXNkN9e3DnlxkgA/oK+sab+KGPixtZhIFuxclSnr5ytxoU2yhteZHtAQHpd8wwQ3fmg==", "user"=>{"email"=>"horngyi6527@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "horngyi6527@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-12-23 07:08:24.016194"], ["last_sign_in_at", "2017-12-23 02:27:25.282583"], ["sign_in_count", 11], ["updated_at", "2017-12-23 07:08:24.017864"], ["id", 5]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 336ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-23 07:08:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered top/index.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 427ms (Views: 396.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/users/5" for 10.0.2.2 at 2017-12-23 07:08:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."user_id" = ? ORDER BY "orders"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 5], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mOrderItem Load (0.8ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 9]]
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (138.6ms)
+Completed 200 OK in 454ms (Views: 412.5ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/users/sign_out" for 10.0.2.2 at 2017-12-23 07:09:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-23 07:09:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered top/index.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 379ms (Views: 352.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-12-23 07:09:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 300ms (Views: 297.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-12-23 07:09:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cTfF40nDsVtOAPue0zpNIkJp/1rZLbt+sMOfXSCN2wiZ/byOPmIxGTyg5AxzwaraQN+NErVLRYo7qaI1SoIhAw==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-12-23 07:09:55.416897"], ["last_sign_in_at", "2017-12-22 16:12:35.521401"], ["sign_in_count", 7], ["updated_at", "2017-12-23 07:09:55.418133"], ["id", 4]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 224ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-23 07:09:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered top/index.html.erb within layouts/application (65.2ms)
+Completed 200 OK in 429ms (Views: 400.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/attachments/4d899f9185c1e46e910e5c6bcdb1a8dc5bf1b68e/store/f373dc2a5889292ab123188992390e0a702577d09962951cd40024e243bc/cd_image" for 10.0.2.2 at 2017-12-23 07:09:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:09:56 +0000] GET "/4d899f9185c1e46e910e5c6bcdb1a8dc5bf1b68e/store/f373dc2a5889292ab123188992390e0a702577d09962951cd40024e243bc/cd_image" 200 6.9ms
+
+Started GET "/attachments/862b9619a90cdea05c0d32e94a7f404ccc6da0ba/store/f0aee628907a26c04fe4804c7d5d034380281372ac57485de85f7b324ad2/cd_image" for 10.0.2.2 at 2017-12-23 07:09:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:09:56 +0000] GET "/862b9619a90cdea05c0d32e94a7f404ccc6da0ba/store/f0aee628907a26c04fe4804c7d5d034380281372ac57485de85f7b324ad2/cd_image" 200 4.1ms
+
+Started GET "/attachments/e37f7db22f61da5da15acef2249cff5d9eba0c18/store/fa137a424a68f6bb53bed2c840b5053f4314a9b487ed6483d5e1b1b80db9/cd_image" for 10.0.2.2 at 2017-12-23 07:09:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:09:56 +0000] GET "/e37f7db22f61da5da15acef2249cff5d9eba0c18/store/fa137a424a68f6bb53bed2c840b5053f4314a9b487ed6483d5e1b1b80db9/cd_image" 200 5.9ms
+
+Started GET "/attachments/24ead281c5a8e736b7a438c92e74e0ac1ee8a4d0/store/9b74b226ee50554428369823f0e0a8c6f90d93da77e372a720bb644df597/cd_image" for 10.0.2.2 at 2017-12-23 07:09:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:09:56 +0000] GET "/24ead281c5a8e736b7a438c92e74e0ac1ee8a4d0/store/9b74b226ee50554428369823f0e0a8c6f90d93da77e372a720bb644df597/cd_image" 200 4.9ms
+
+Started GET "/users/4" for 10.0.2.2 at 2017-12-23 07:09:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOrder Load (2.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."user_id" = ? ORDER BY "orders"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 4], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mOrderItem Load (2.0ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrderItem Load (1.5ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderItem Load (1.2ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrderItem Load (1.6ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderItem Load (1.8ms)[0m  [1m[34mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (160.5ms)
+Completed 200 OK in 478ms (Views: 437.9ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/users/sign_out" for 10.0.2.2 at 2017-12-23 07:09:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-23 07:09:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered top/index.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 374ms (Views: 331.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-12-23 07:10:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 316ms (Views: 311.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-12-23 07:10:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EtU7Xq+23BTnzsPDA9YTM8Cdp3N5J30SMF5GJmmCTe24DgPcH9QJ8AKrMeSeODg5E9ztx/3zuX4CtJSYCbyXCg==", "user"=>{"email"=>"s@s", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "s@s"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 148ms (ActiveRecord: 3.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EtU7Xq+23BTnzsPDA9YTM8Cdp3N5J30SMF5GJmmCTe24DgPcH9QJ8AKrMeSeODg5E9ztx/3zuX4CtJSYCbyXCg==", "user"=>{"email"=>"s@s", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 471ms (Views: 332.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-23 07:10:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered top/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 487ms (Views: 437.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/attachments/4d899f9185c1e46e910e5c6bcdb1a8dc5bf1b68e/store/f373dc2a5889292ab123188992390e0a702577d09962951cd40024e243bc/cd_image" for 10.0.2.2 at 2017-12-23 07:10:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:10:25 +0000] GET "/4d899f9185c1e46e910e5c6bcdb1a8dc5bf1b68e/store/f373dc2a5889292ab123188992390e0a702577d09962951cd40024e243bc/cd_image" 200 13.7ms
+
+Started GET "/attachments/862b9619a90cdea05c0d32e94a7f404ccc6da0ba/store/f0aee628907a26c04fe4804c7d5d034380281372ac57485de85f7b324ad2/cd_image" for 10.0.2.2 at 2017-12-23 07:10:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:10:25 +0000] GET "/862b9619a90cdea05c0d32e94a7f404ccc6da0ba/store/f0aee628907a26c04fe4804c7d5d034380281372ac57485de85f7b324ad2/cd_image" 200 13.2ms
+
+Started GET "/attachments/e37f7db22f61da5da15acef2249cff5d9eba0c18/store/fa137a424a68f6bb53bed2c840b5053f4314a9b487ed6483d5e1b1b80db9/cd_image" for 10.0.2.2 at 2017-12-23 07:10:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:10:25 +0000] GET "/e37f7db22f61da5da15acef2249cff5d9eba0c18/store/fa137a424a68f6bb53bed2c840b5053f4314a9b487ed6483d5e1b1b80db9/cd_image" 200 10.4ms
+
+Started GET "/attachments/24ead281c5a8e736b7a438c92e74e0ac1ee8a4d0/store/9b74b226ee50554428369823f0e0a8c6f90d93da77e372a720bb644df597/cd_image" for 10.0.2.2 at 2017-12-23 07:10:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2017-12-23 07:10:25 +0000] GET "/24ead281c5a8e736b7a438c92e74e0ac1ee8a4d0/store/9b74b226ee50554428369823f0e0a8c6f90d93da77e372a720bb644df597/cd_image" 200 6.0ms
+
+Started GET "/items/1" for 10.0.2.2 at 2017-12-23 07:10:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mDisc Load (2.2ms)[0m  [1m[34mSELECT "discs".* FROM "discs" WHERE "discs"."item_id" = ? ORDER BY "discs"."disc_number" ASC[0m  [["item_id", 1]]
+  [1m[36mTrack Load (1.8ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."disc_id" = ? ORDER BY "tracks"."track_number" ASC[0m  [["disc_id", 1]]
+  [1m[36mTrack Load (2.3ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."disc_id" = ? ORDER BY "tracks"."track_number" ASC[0m  [["disc_id", 3]]
+  Rendered items/show.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 423ms (Views: 381.6ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/items/1" for 10.0.2.2 at 2017-12-23 07:13:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mDisc Load (2.6ms)[0m  [1m[34mSELECT "discs".* FROM "discs" WHERE "discs"."item_id" = ? ORDER BY "discs"."disc_number" ASC[0m  [["item_id", 1]]
+  [1m[36mTrack Load (1.7ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."disc_id" = ? ORDER BY "tracks"."track_number" ASC[0m  [["disc_id", 1]]
+  [1m[36mTrack Load (2.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."disc_id" = ? ORDER BY "tracks"."track_number" ASC[0m  [["disc_id", 3]]
+  Rendered items/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 384ms (Views: 343.4ms | ActiveRecord: 8.3ms)
+
+

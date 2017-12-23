@@ -31,10 +31,11 @@
 				<tr>
 					<td class="center">
 						<ruby>
-							<%= user.first_name %> 
 							<%= user.last_name%>
-								<rt><%= user.first_name_kana %> 
+							<%= user.first_name %> 							
+								<rt> 
 									<%= user.last_name_kana %>
+									<%= user.first_name_kana %>
 								</rt>
 						</ruby>
 					</td>
@@ -45,7 +46,7 @@
 					<td class="center"><%= user.leave %></td>
 					<td><%= link_to adminsters_show_user_path(user) do %><i class="fa fa-window-maximize" aria-hidden="true"></i><% end%></td>
 					<td><%= link_to adminsters_edit_user_details_path(user) do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %></td>
-					<td><%= link_to user_path(user), method: :delete, "data-confirm" => "Are you sure?" do %><i class="fa fa-trash-o" aria-hidden="true"></i><% end %></td>
+					<td><%= link_to destroy_user_path(user), method: :delete, "data-confirm" => "Are you sure?" do %><i class="fa fa-trash-o" aria-hidden="true"></i><% end %></td>
 				</tr>
 				<%end%>
 			</tbody>

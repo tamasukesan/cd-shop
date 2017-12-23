@@ -37,7 +37,9 @@ class AdminstersController < ApplicationController
 
 
 	def destroy
-		
+		user = User.find(params[:id])
+        user.update_attribute(:leave, false)
+        redirect_to adminsters_manage_users_path
 	end
 
 	def user_params

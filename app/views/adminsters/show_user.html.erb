@@ -53,8 +53,8 @@
 		</div>
 			<div class="col-xs-offset-2 col-xs-8">
 				<div class="pull-right">
-					<%= link_to ' 登録内容の編集', edit_user_path(current_user), class: 'btn btn-default glyphicon glyphicon-cog' %>
-					<%= link_to '退会する', user_path, class: 'btn btn-default', method: :delete, data: { confirm: "本当に退会しますか…？" } %>
+					<%= link_to ' 登録内容の編集', adminsters_edit_user_details_path, class: 'btn btn-default glyphicon glyphicon-cog' %>
+					<%#= link_to '退会する', user_path, class: 'btn btn-default', method: :delete, data: { confirm: "本当に退会しますか…？" } %>
  				</div>
 		    </div>
     </div>
@@ -69,12 +69,12 @@
 							<p><%= order.created_at.strftime('%Y年%m月%d日 %H:%M') %></p>
 						<h4>購入者</h4>
 						<p>
-							<%= order.billing_last_name %>
 							<%= order.billing_first_name %>
+							<%= order.billing_last_name %>
 						</p>
 						<h4>送付先</h4>
 						<p>
-							<%= order.billing_post_code %>
+							<%= order.billing_post_code %>  
 							<%= order.billing_address %>
 						</p>
 						<h4>ステータス</h4>
@@ -112,5 +112,4 @@
 	<%= paginate @orders, class: "pagenate" %>
     </div>
 </div>
-
 

@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  scope :get_all, ->(search) { where(User.arel_table[:first_name].matches("%#{search}%").or(User.arel_table[:last_name_kana].matches("%#{search}%").or(User.arel_table[:first_name_kana].matches("%#{search}%")))) }
+  scope :get_all, ->(search) { where(User.arel_table[:first_name].matches("%#{search}%").or(User.arel_table[:email].matches("%#{search}%").or(User.arel_table[:last_name].matches("%#{search}%").or(User.arel_table[:last_name_kana].matches("%#{search}%").or(User.arel_table[:first_name_kana].matches("%#{search}%")))))) }
   scope :leave, -> {where(deleted:false)}
 
   validates :first_name, :last_name, :first_name_kana, :last_name_kana, :address, presence: true

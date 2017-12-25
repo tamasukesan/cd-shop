@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   get '/adminsters/users' => 'adminsters#manage_users', as: "adminsters_manage_users"
   get '/adminsters/user/:id/edit(.:format)' => 'adminsters#edit_user_details', as: "adminsters_edit_user_details"
   delete 'adminsters/users/:id' => 'adminsters#destroy', as: "destroy_user"
-  
 
   root "top#index"
 end

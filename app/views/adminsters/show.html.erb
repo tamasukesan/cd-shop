@@ -1,0 +1,57 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="col-md-3 col-md-offset-5">ユーザー一覧</h2>
+			<div class="title col-md-12"></div>
+		</div>
+	</div>
+
+	<div class="row col-md-12">
+		<%= form_tag(adminsters_manage_users_path, method: "get") do %>
+			<%= text_field_tag :search, params[:search], class: "searchbar col-md-8 col-md-offset-2", placeholder: "検索..." %>
+			<%= submit_tag "検索", class: "btn btn-success" %>
+		<% end %>
+	</div>
+
+	<div class="row">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th class="center">ユーザー名</th>
+					<th class="center">メール</th>
+					<th class="center">郵便番号</th>
+					<th class="center">住所</th>
+					<th class="center" >電話番号</th>
+					<th class="center" >存在</th>
+					<th class="center" colspan="3">アクション</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @users.each do |user| %>
+				<tr>
+					<td class="center">
+						<ruby>
+							<%= user.last_name%>
+							<%= user.first_name %> 							
+								<rt> 
+									<%= user.last_name_kana %> 
+									<%= user.first_name_kana %>
+								</rt>
+						</ruby>
+					</td>
+					<td class="center"><%= user.email %></td>
+					<td class="center"><%= user.post_code %></td>
+					<td class="center"><%= user.address %></td>
+					<td class="center"><%= user.phone %></td>
+					<td class="center"><%= user.leave %></td>
+					<td><%= link_to adminsters_show_user_path(user) do %><i class="fa fa-window-maximize" aria-hidden="true"></i><% end%></td>
+					<td><%= link_to adminsters_edit_user_details_path(user) do %><i class="fa fa-pencil" aria-hidden="true"></i><% end %></td>
+					<td><%= link_to destroy_user_path(user), method: :delete, "data-confirm" => "Are you sure?" do %><i class="fa fa-trash-o" aria-hidden="true"></i><% end %></td>
+				</tr>
+				<%end%>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+

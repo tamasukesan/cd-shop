@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-	# before_action :authenticate_user!, except: [:top, :show]
+	before_action :authenticate_adminster!, only: [:new, :create, :edit, :update, :destroy]
 	def new
 		@item = Item.new
 		1.times do
@@ -51,6 +51,7 @@ class ItemsController < ApplicationController
 
 	def show
 		@item = Item.find(params[:id])
+		@cart = Cart.new
 	end
 
 	private

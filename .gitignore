@@ -22,3 +22,7 @@
 
 .byebug_history
 */.DS_Store
+
+db/development.sqlite3
+log/development.log
+tmp/cache/assets/sprockets/v3.0/i5/i58u50wMIBzJppNbxZRM-sPwf10uR_1ga2rOjE8jG-c.cache

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :authenticate_user!
 	def show
 		@user = User.find(params[:id])
 		@orders = @user.orders.page(params[:page]).reverse_order
@@ -14,13 +15,11 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
-		if @user.update(user_params)
-			sign_in(@user, bypass: true) 
-        	redirect_to user_path(@user.id), notice: "更新しました。"
-        else
-        	#redirect_to edit_user_path(@user.id), alert: "変更できませんでした。もう一度やり直してください。"
-        	render 'edit'
-        end
+  	if @user.update(user_params)
+  	  redirect_to user_path(@user.id)
+    else
+      render :template => "users/edit"
+    end
 	end
 
 

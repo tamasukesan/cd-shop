@@ -29,10 +29,11 @@
 					<tbody>
 					<% quantity_count = 0 %>
 					<% sum_count = 0 %>
-					<% if current_user.cart.each do |cart_item| %>
+					<% if current_user.carts.each do |cart_item| %>
 						<tr>
 							<td>
-								<div><%= attachment_image_tag cart_item.item, :cd_image, class: "img-thumbnail cdcover", fallback: "no_image.jpg" %></div>
+								<div><%= attachment_image_tag cart_item.item, :cd_image, class: "img-thumbnail cdcover", fallback: "no_image.jpg" %>
+								</div>
 							</td>
 							<td>
 								<%= cart_item.item.album_name %>
@@ -50,7 +51,7 @@
 								<%= link_to "削除", cart_item, method: :delete, remote: true, class: 'btn btn-danger'  %>
 							</td>
 						</tr>
-						<% quantity_count += cart_item.quantity %>
+						<% quantity_count += cart_item.quantity.to_i %>
 						<% sum_count += cart_item.quantity*cart_item.item.price %>
 					<% end.empty? %>
 					    <p>カートに商品は入っていません。</p>
@@ -61,30 +62,28 @@
 			</div>
 
 			<h2>発送先住所</h2>
-
-			        <% if @order.errors.any? %>
-			            <div id="error_explanation">
-			                <h2><%= @order.errors.count %>件のエラーが発生しました！</h2>
-			                <ul>
-			                  <% @order.errors.full_messages.each do |message| %>
-			                    <li><%= message %></li>
-			                  <% end %>
-			                </ul>
-			            </div>
-			        <% end %>
+				<% if flash[:error].present? %>
+					<ul class="errors">
+						<%= flash[:error].count %>件エラー
+						<% flash[:error].each do |e| %>
+							<li><%= e %></li>
+							<% @user = @user_valid %>
+						<% end %>
+					</ul>
+				<% end %>
 				<%= form_for(@order) do |f| %>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>受取人名 苗字 かな</label>
-							    <%= f.text_field :billing_first_name, class:"form-control", placeholder:"苗字", value: @user.last_name %>
-							    <%= f.text_field :billing_first_name_kana, class:"form-control", placeholder:"苗字(カナ)", value: @user.last_name_kana %>
+							    <%= f.text_field :billing_last_name, class:"form-control", placeholder:"苗字", value: @user.last_name %>
+							    <%= f.text_field :billing_last_name_kana, class:"form-control", placeholder:"苗字(カナ)", value: @user.last_name_kana %>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>受取人名 名前 かな</label>
-						        <%= f.text_field :billing_last_name, class:"form-control", placeholder:"名前", value: @user.first_name  %>
-						        <%= f.text_field :billing_last_name_kana, class:"form-control", placeholder:"名前(カナ)", value: @user.first_name_kana  %>
+						        <%= f.text_field :billing_first_name, class:"form-control", placeholder:"名前", value: @user.first_name  %>
+						        <%= f.text_field :billing_first_name_kana, class:"form-control", placeholder:"名前(カナ)", value: @user.first_name_kana  %>
 						</div>
 					</div>
 		            <div class="col-md-12">
@@ -111,7 +110,7 @@
 					    <div class="panel-body">
 
 	                    <% if quantity_count == 0 %>
-                          <div class="btn btn-primary btn-block"> カートに商品を入れてください</div>
+	                      <%= link_to 'カートに商品を入れてください', root_path, class: 'btn btn-primary btn-block' %>
 	                    <% else %>
 			             <%= f.submit "レジへ進む", class:"btn btn-primary btn-block"%>
 				        <% end %>
@@ -123,5 +122,4 @@
 </div>
 
 
-</div>
-</div><br><br>
+<br><br>

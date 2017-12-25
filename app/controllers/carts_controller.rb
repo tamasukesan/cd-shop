@@ -1,8 +1,10 @@
 class CartsController < ApplicationController
+	before_action :authenticate_user!
 	def show
-		@cart_items = current_user.cart
+		@cart_items = current_user.carts
 		@order = Order.new
 		@user = current_user
+		@user_valid = $user_valid
 	end
 
 	def create
@@ -22,7 +24,7 @@ class CartsController < ApplicationController
 	def destroy
 		@cart_item = Cart.find(params[:id])
 		@cart_item.destroy
-		redirect_to cart_path
+		redirect_to cart_path(current_user)
 	end
 
 	private
